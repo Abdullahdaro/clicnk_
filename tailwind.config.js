@@ -8,6 +8,7 @@ module.exports = {
         secondary: "#00f6ff",
         main: "rgba(216, 167, 104, 0.91)",
         bg: "rgba(221, 172, 104, 0.15);",
+        bg1:'rgba(60, 60, 59, 0.02)'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
