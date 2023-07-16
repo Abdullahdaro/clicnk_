@@ -9,6 +9,7 @@ import HowItWorks from './component/HowItWorks'
 import Partner from "./component/Partner";
 import Digitalsmile from "./component/Digitalsmile";
 import Doctors from "./component/Doctors";
+import Europe from "./component/Europe";
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
           <HowItWorks /> 
           <Doctors />
           <Digitalsmile />
+          <Europe />
           <Partner/>
         </div>
       </div>
