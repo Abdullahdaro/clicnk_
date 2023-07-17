@@ -1,8 +1,61 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
+import blackteeth from '../assets/blackteeth.png'
+import blackwomanteeth from '../assets/blackwomanteeth.png'
+import girlwithsmileblackhair from '../assets/girlwithsmileblackhair.png'
+import oldmansmile from '../assets/oldmansmile.png'
+import smilegirlteeth from '../assets/smilegirlteeth.png'
+import smileteeth from '../assets/smileteeth.png'
+import styles from '../styles'
+
+
+const photos = [
+    {
+        src: blackteeth,
+        alt: 'blackteeth'
+    },
+    {
+        src: blackwomanteeth,
+        alt: 'girlteeth'
+    },
+    {
+        src: girlwithsmileblackhair,
+        alt: 'girlwithsmileblackhair'
+    },
+    {
+        src: oldmansmile,
+        alt: 'oldmansmile'
+    },
+    {   
+        src: smilegirlteeth,
+        alt: 'smilegirltheeth'
+    },
+    {
+        src: smileteeth,
+
+    }
+]
 
 const teeth = () => {
+    const [currentPhoto, setCurrentPhoto] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+          setCurrentPhoto((prevPhoto) => (prevPhoto + 1) % photos.length);
+        }, 3000);
+    
+        return () => clearInterval(timer);
+      }, []);
+    
+      const handlePrev = () => {
+        setCurrentPhoto((prevPhoto) => (prevPhoto - 1 + photos.length) % photos.length);
+      };
+    
+      const handleNext = () => {
+        setCurrentPhoto((prevPhoto) => (prevPhoto + 1) % photos.length);
+      };
+
   return (
-    <div className="w-full items-center justify-center bg-bg flex">
+    <div className={`${styles.paddingY} sm:gird w-full items-center justify-center bg-bg md:flex`}>
         <div className=" p-10 flex flex-col  ">
             <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Before & After</span>
             <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Experience</span>
@@ -34,10 +87,31 @@ const teeth = () => {
                 </svg>
             </button>
         </div>
-        <div className="grid gap-4">
-            <div className=''>
-                Photos
-            </div>    
+        <div className="grid gap-4 sm:ml-0  md:ml-24">
+            <div className="relative flex">
+                <div className=" w-full h-full  px-2 flex justify-between items-center">
+                    <button
+                            className="bg-gray-500 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded-l"
+                            onClick={handlePrev}
+                        >
+                            Prev
+                    </button>
+                </div>
+                <img
+                src={photos[currentPhoto].src}
+                alt={photos[currentPhoto].alt}
+                className="md:w-[600px] sm:w-max-[100px] h-auto rounded-[40px]"
+                />
+                <div className=" w-full h-full px-2 flex justify-between items-center">
+                    
+                    <button
+                        className="bg-gray-500 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded-r"
+                        onClick={handleNext}
+                    >
+                        Next
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
   )

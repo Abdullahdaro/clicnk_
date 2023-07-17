@@ -49,10 +49,9 @@ const HowItWorks = () => {
                 </svg>
             </div>
         </div>
-        <div class="w-full overflow-hidden">
-            <svg class="w-full h-auto" className='' viewBox="0 20 1400 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-124 287.231C-106.915 280.731 85.5482 70.231 350.876 106.231C616.203 142.231 620.223 334.231 898.616 270.231C1177.01 206.231 1465.95 -82.769 1699.12 29.731C1885.65 119.731 1960.76 166.564 1975 178.731" stroke="#DDAC68" stroke-width="4" />
-            </svg>
+        <div className="relative">
+            <div className="border-t-2 border-white h-1"></div>
+            <div className="wave-line"></div>
         </div>
         <div className='flex justify-between px-10 pt-5'>
             <div>
