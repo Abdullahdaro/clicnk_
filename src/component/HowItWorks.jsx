@@ -5,14 +5,14 @@ import Picture7 from '../assets/Picture7.png'
 const HowItWorks = () => {
     
   return (
-    <div className={`bg-bg1 ${styles.paddingY}`}>
-        <div class="text-main items-center flex justify-center lg:text-[75px] leading-normal">
+    <div className={`bg-bg1 pt-6 pb-6`}>
+        <div class="text-main items-center flex justify-center lg:text-[55px] leading-normal">
             <h1 className='bg-[#DDAC68] px-20 rounded-[40px] font-semibold bg-opacity-10'>How it works</h1>
         </div>
-        <div className='flex justify-between px-10 '>
-            <div className='pt-24 pl-20'>
+        <div className='flex justify-between px-10 pt-4'>
+            <div className='pl-10'>
                 <div>
-                    <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[30px] font-semibold'>Submit a reguest</h1>
+                    <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[22px] font-semibold'>Submit a reguest</h1>
                 </div>
                 <svg width="107" height="50" viewBox="0 0 107 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.9258 36.3008V17.043C22.2227 17.5117 21.4805 18.0195 20.6992 18.5664C19.931 19.1133 19.2214 19.6081 18.5703 20.0508L17.0078 16.3203L22.7695 11.4961H28.1602V36.3008H22.9258Z" fill="#DDAC68"/>
@@ -24,8 +24,8 @@ const HowItWorks = () => {
                 </svg>
             </div>
             <div className='pl-20'>
-                <div className='pt-24'>
-                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[30px] flex flex-warp w-[400px] font-semibold'>Receive a treatment plan within 24 Hours</h1>
+                <div className='pt-5'>
+                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] flex flex-warp w-[400px] font-semibold'>Receive a treatment plan within 24 Hours</h1>
                 </div>
                 <svg width="106" height="50" viewBox="0 0 106 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.3" d="M68.2743 10H80.4335C80.787 10 81.129 10.1248 81.3994 10.3523L89.0611 16.8005C89.3998 17.0855 89.5953 17.5055 89.5953 17.9481V37.125C89.5953 39.8108 89.5644 40 86.7956 40H68.2743C65.5054 40 65.4746 39.8108 65.4746 37.125V12.875C65.4746 10.1892 65.5054 10 68.2743 10Z" fill="#DDAC68"/>
@@ -35,11 +35,10 @@ const HowItWorks = () => {
                 <rect x="0.147705" width="50.2514" height="50" rx="10" fill="#DDAC68" fill-opacity="0.1"/>
                 <path d="M17.8013 12.3359C18.5565 11.9323 19.4289 11.6198 20.4185 11.3984C21.4211 11.1641 22.4367 11.0469 23.4653 11.0469C24.507 11.0339 25.5291 11.1445 26.5317 11.3789C27.5343 11.6003 28.4263 11.9648 29.2075 12.4727C30.0018 12.9674 30.6398 13.612 31.1216 14.4062C31.6034 15.1875 31.8442 16.138 31.8442 17.2578C31.8442 18.3646 31.5057 19.4258 30.8286 20.4414C30.1515 21.457 29.1294 22.3229 27.7622 23.0391C29.3898 23.7812 30.5877 24.6862 31.356 25.7539C32.1372 26.8216 32.5278 28.1042 32.5278 29.6016C32.5278 30.8776 32.2609 31.9779 31.7271 32.9023C31.2062 33.8138 30.5096 34.5625 29.6372 35.1484C28.7778 35.7214 27.7948 36.1445 26.688 36.418C25.5942 36.6784 24.4679 36.8021 23.3091 36.7891C22.1632 36.776 21.0369 36.6328 19.9302 36.3594C18.8234 36.0729 17.8403 35.6693 16.981 35.1484L18.1138 31.5938C18.5955 31.9453 19.1619 32.2122 19.813 32.3945C20.464 32.5768 21.1346 32.681 21.8247 32.707C22.5148 32.7331 23.1919 32.6875 23.856 32.5703C24.52 32.4531 25.1125 32.2643 25.6333 32.0039C26.1541 31.7305 26.5773 31.3984 26.9028 31.0078C27.2284 30.6042 27.3911 30.1354 27.3911 29.6016C27.3911 29.1328 27.2479 28.6641 26.9614 28.1953C26.675 27.7135 26.2388 27.2839 25.6528 26.9062C25.0799 26.5286 24.3507 26.2161 23.4653 25.9688C22.5929 25.7214 21.5708 25.5911 20.3989 25.5781L20.2036 21.9258C20.8026 21.8477 21.4666 21.7109 22.1958 21.5156C22.938 21.3073 23.6346 21.0339 24.2856 20.6953C24.9497 20.3568 25.5096 19.9596 25.9653 19.5039C26.4341 19.0352 26.688 18.4948 26.7271 17.8828C26.675 17.3099 26.5122 16.8281 26.2388 16.4375C25.9653 16.0469 25.6203 15.7409 25.2036 15.5195C24.7869 15.2852 24.3182 15.1354 23.7974 15.0703C23.2765 14.9922 22.7427 14.9792 22.1958 15.0312C21.6619 15.0703 21.1346 15.168 20.6138 15.3242C20.0929 15.4805 19.6307 15.6758 19.2271 15.9102L17.8013 12.3359Z" fill="#DDAC68"/>
                 </svg>
-
             </div>
-            <div className='pr-20 pt-20'>
+            <div className='pr-20 '>
                 <div>
-                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[30px] font-semibold'>Get treated and fly back</h1>
+                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] font-semibold'>Get treated and fly back</h1>
                 </div>
                 <svg width="107" height="50" viewBox="0 0 107 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.676514" width="105.528" height="50" rx="10" fill="#DDAC68" fill-opacity="0.1"/>
@@ -49,11 +48,12 @@ const HowItWorks = () => {
                 </svg>
             </div>
         </div>
-        <div className="relative">
-            <div className="border-t-2 border-white h-1"></div>
-            <div className="wave-line"></div>
+        <div class="w-full overflow-hidden">
+            <svg class="w-full h-auto" viewBox="-150 -000 2150 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-124 287.231C-106.915 280.731 85.5482 70.231 350.876 106.231C616.203 142.231 620.223 334.231 898.616 270.231C1177.01 206.231 1465.95 -82.769 1699.12 29.731C1885.65 119.731 1960.76 166.564 1975 178.731" stroke="#DDAC68" stroke-width="4" />
+            </svg>
         </div>
-        <div className='flex justify-between px-10 pt-5'>
+        <div className='flex justify-between pl-40'>
             <div>
                 <svg width="107" height="50" viewBox="0 0 107 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.739502" width="105.528" height="50" rx="10" fill="#DDAC68" fill-opacity="0.1"/>
@@ -71,7 +71,7 @@ const HowItWorks = () => {
                 </defs>
                 </svg>
                 <div>
-                    <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[30px] w-[300px] font-semibold'>Qualident medical consultant will be in contact with you</h1>
+                    <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[22px] w-[300px] font-semibold'>Qualident medical consultant will be in contact with you</h1>
                 </div>
             </div>
             <div>
@@ -85,7 +85,7 @@ const HowItWorks = () => {
                 <path d="M26.8962 27.832L26.9743 20.9375L21.2907 27.832H26.8962ZM26.8766 38.3008V32.6758H16.486V28.0859L28.4587 13.1836H31.8376V27.832H34.2204V32.6758H31.8376V38.3008H26.8766Z" fill="#DDAC68"/>
                 </svg>
                 <div className=''>
-                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[30px] flex flex-warp  w-[300px] font-semibold'>Arranging your medical trip</h1>
+                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] flex flex-warp  w-[300px] font-semibold'>Arranging your medical trip</h1>
                 </div>
             </div>
             <div>
@@ -97,7 +97,7 @@ const HowItWorks = () => {
                 <path d="M25.7474 32.1211C26.2683 32.1211 26.7305 32.0039 27.1342 31.7695C27.5508 31.5352 27.8959 31.2422 28.1693 30.8906C28.4558 30.5391 28.6706 30.1615 28.8138 29.7578C28.9701 29.3542 29.0482 28.9766 29.0482 28.625C28.9831 28.0651 28.8073 27.5573 28.5209 27.1016C28.2344 26.6458 27.8763 26.2552 27.4467 25.9297C27.03 25.5911 26.5612 25.3307 26.0404 25.1484C25.5196 24.9661 24.9857 24.875 24.4388 24.875C24.0222 24.875 23.6055 24.9336 23.1888 25.0508C22.7852 25.168 22.4011 25.3503 22.0365 25.5977C21.8412 26.3008 21.7761 27.043 21.8412 27.8242C21.9193 28.5924 22.1146 29.3021 22.4271 29.9531C22.7396 30.5911 23.1758 31.1185 23.7357 31.5352C24.2956 31.9518 24.9662 32.1471 25.7474 32.1211ZM16.9388 27.668C16.9388 26.1966 17.1797 24.6927 17.6615 23.1562C18.1563 21.6198 18.8529 20.1224 19.7513 18.6641C20.6498 17.2057 21.7305 15.832 22.9935 14.543C24.2696 13.2409 25.6888 12.0951 27.2513 11.1055C27.4076 11.2878 27.6029 11.5352 27.8373 11.8477C28.0717 12.1471 28.3125 12.4596 28.5599 12.7852C28.8073 13.0977 29.0417 13.3971 29.2631 13.6836C29.4974 13.9701 29.6732 14.1849 29.7904 14.3281C26.8868 16.2161 24.8555 18.2734 23.6967 20.5C23.9961 20.4219 24.3151 20.3633 24.6537 20.3242C24.9922 20.2721 25.3243 20.2461 25.6498 20.2461C26.6263 20.2461 27.5834 20.4219 28.5209 20.7734C29.4714 21.125 30.3243 21.6458 31.0795 22.3359C31.8347 23.013 32.4401 23.8594 32.8959 24.875C33.3646 25.8906 33.599 27.056 33.599 28.3711C33.599 29.5951 33.3907 30.7214 32.974 31.75C32.5704 32.7656 31.9974 33.6445 31.2552 34.3867C30.5261 35.1289 29.6537 35.7083 28.6381 36.125C27.6224 36.5286 26.5026 36.7305 25.2787 36.7305C23.9375 36.7305 22.7461 36.5091 21.7045 36.0664C20.6758 35.6237 19.8034 35.0052 19.0873 34.2109C18.3842 33.4036 17.8503 32.4466 17.4857 31.3398C17.1211 30.2201 16.9388 28.9961 16.9388 27.668Z" fill="#DDAC68"/>
                 </svg>
                 <div>
-                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[30px] w-[300px] font-semibold'>Staying in touch with you after treatment</h1>
+                    <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] w-[300px] font-semibold'>Staying in touch with you after treatment</h1>
                 </div>
             </div>
         </div>
