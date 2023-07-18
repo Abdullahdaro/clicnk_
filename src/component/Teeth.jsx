@@ -91,10 +91,12 @@ const teeth = () => {
             <div className="relative flex">
                 <div className=" w-full h-full  px-2 flex justify-between items-center">
                     <button
-                            className="bg-gray-500 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded-l"
+                            className=" hover:text-white text-white font-bold px-4 py-2 rounded-l"
                             onClick={handlePrev}
                         >
-                            Prev
+                            <svg width="38" height="65" viewBox="0 0 38 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 6L6 32.5L32 59" stroke="#DDAC68" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                     </button>
                 </div>
                 <img
@@ -105,10 +107,12 @@ const teeth = () => {
                 <div className=" w-full h-full px-2 flex justify-between items-center">
                     
                     <button
-                        className="bg-gray-500 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded-r"
+                        className=" text-white font-bold px-4 py-2 rounded-r"
                         onClick={handleNext}
                     >
-                        Next
+                        <svg width="38" height="65" viewBox="0 0 38 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 59L32 32.5L6 6" stroke="#DDAC68" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </div>
             </div>

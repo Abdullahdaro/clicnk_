@@ -13,11 +13,10 @@ import Picture6 from '../assets/Picture6.png'
 
 const main = () => {
   return (
-    <div className={`flex flex-col justify-center w-full items-center relative ${styles.paddingY}`} >
+    <div className={`flex flex-col w-full items-center relative `} >
         <img className="absolute z-0 inset-0 w-full h-full  object-cover opacity-40" src={background} alt="Background" />
         <img className="absolute z-0 inset-0 h-full justify-center w-full object-cover " src={main1} alt="Main1" />
-        <div className='z-10 flex flex-col'>
-            <div className='z-10 flex items-center justify-center'>
+        <div className='z-10 flex pb-40 absolute items-start justify-center'>
                 <div className=''>
                     <img src={Picture2} className='w-[300px]' />
                 </div>
@@ -25,6 +24,7 @@ const main = () => {
                     <img src={Picture1} className='w-[300px]' />
                 </div>
             </div>
+        <div className='z-10 flex pt-40 pb-40 flex-col'>
             <div className='flex items-start w-full z-10'>
                 <div className='pr-60 justify-start items-start'>
                     <div className='z-10 pl-10'>
