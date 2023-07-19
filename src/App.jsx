@@ -15,8 +15,8 @@ import Europe from "./component/Europe";
 const App = () => {
   return (
     <div className="bg-primary  w-full overflow-hidden">
-      <div className={``}>
-        <div className={`z-20 fixed`}>
+      <div className={`w-full`}>
+        <div className={`z-20 w-full h-full`}>
           <Constant />
         </div>
       </div>

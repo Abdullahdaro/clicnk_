@@ -1,13 +1,10 @@
 import React from 'react'
 import background from '../assets/background.png'
-import reward from '../assets/reward.png'
-import reward1 from '../assets/reward1.png' 
 import main1 from '../assets/main1.png'
 import styles from '../styles'
 import Picture1 from '../assets/Picture1.png'
 import Picture2 from '../assets/Picture2.png'
 import Picture3 from '../assets/Picture3.png'
-import Picture4 from '../assets/Picture4.png'
 import Picture5 from '../assets/Picture5.png'
 import Picture6 from '../assets/Picture6.png'
 

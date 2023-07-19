@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from '../styles'
-import Picture7 from '../assets/Picture7.png'
+
 
 const HowItWorks = () => {
     

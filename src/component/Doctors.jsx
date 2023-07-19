@@ -3,6 +3,9 @@ import styles from '../styles'
 import blackwoman from '../assets/blackwoman.png'
 import girldoctor from '../assets/girldoctor.png'
 import oldmandoctor from '../assets/oldmandoctor.png'
+import womandoctor from '../assets/womandoctor.png'
+import younggirldoctor from '../assets/younggirldoctor.png'
+import girldoctorwithblackhair from '../assets/girldoctorwithblackhair.png'
 import girlwithsmile from '../assets/girlwithsmile.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
@@ -16,19 +19,43 @@ const doctors = [
         way: 'Periodontist & Dental Implant Specialist',
         education: 'Boston University School of Dentistry- Bachelor Degree1992 New Jersey Dental School- Masters Degree 1997 Harvard School of Dental Medicine: Lecturer on Oral Medicine, Infection and Immunity',   
         image: oldmandoctor,
-        video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-        flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
-        country: 'USA'
+        language: 'English, Arabic',
+        speciality: 'Dental Implant, All-On-4/6, Bone Grafting, Sinus Lifting, Gum Disease Treatment, Gingivitis Treatment, Aesthetic Gum Treatment, Gingival Recession, Bleeding Gum',
+        years: ' years',
+
     },
     {
-      name: 'John Doe',
-      treatment: 'Q HollyWood Smile',
-      review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id rhoncus luctus, nisl nunc aliquam urna, vitae aliquam nisl nunc eu nunc. Sed euismod, diam id rhoncus luctus, nisl nunc aliquam urna, vitae aliquam nisl nunc eu nunc.',
-      image: girldoctor,
-      video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-      flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
-      country: 'USA'
-  },
+        name: 'Dr. Ebru Bütün',
+        way: 'Periodontist & Dental Implant Specialist',   
+        image: girldoctor,
+        language: 'English,Turkish',
+        speciality:  'Dental Implant, All-On-4/6, Bone Grafting, Sinus Lifting, Gum Disease Treatment, Gingivitis Treatment, Aesthetic Gum Treatment, Gingival Recession, Bleeding Gum' ,
+        years: '10 years',
+    },
+    {
+      name: 'Dr. Duygu Bilgili',
+      way: 'Endodontist',   
+      image: womandoctor,
+      language: 'English,Turkish, French',
+      speciality:  'Root Canal Treatment, Traumatic Dental Injuries, Endodontic Retreatment, Endodontic Surgery' ,
+      years: '13 years',
+    },
+    {
+      name: 'Dr. Melek Aksoy',
+      way: 'Cosmetic Specialist',   
+      image: younggirldoctor,
+      language: 'English, Arabic, Turkish',
+      speciality:  'Smile Design (Zirconium Crowns, E-Max Laminate Veneers), Composite Bonding, Inlay & Onlay, Teeth Whitening / Bleaching' ,
+      years: '5 years',
+    },
+    {
+      name: 'Dr. Mina Mehmetoğlu',
+      way: 'Prosthodontist      ',   
+      image: girldoctorwithblackhair,
+      language: 'English, Persian, Turkish',
+      speciality:  'Smile Design (Zirconium Crowns, E-Max Laminate Veneers), Implant-Top Prosthesis, Dentures, Composite Bonding, Aesthetic Gum Treatment' ,
+      years: '8 years',
+    },
 ]
 
 const Doctors = () => {
@@ -63,21 +90,25 @@ const Doctors = () => {
   const nextReview = doctors[nextIndex];
 
   return (
-    <div className=''>
+    <div className='flex flex-col items-center'>
       <div className='items-center flex py-10 justify-center'>
         <h1 className='text-[50px] font-bold bg-[#DDAC68] bg-opacity-10 px-8 py-2 rounded-[40px]'>Our Specialist Doctors</h1>
       </div>
-      <div className={`justify-start flex items-start`}>
-        <div className='ml-16 pt-40 justify-start items-start flex flex-col'>
+      <div className={`justify-center flex items-start`}>
+        <div className='ml-16 pt-40 justify-center items-start flex flex-col'>
           <h1 className='text-[40px] font-bold text-[#DDAC68] leading-tight w-[438px] '>{doctor.name}</h1>
           <span className='text-[#3C3C3B] text-[18px] leading-tight font-semibold'>{doctor.way}</span>
           <div className='pt-14'>
-              <p className='w-[438px] text-[#DDAC68] text-[20px] leading-tight font-semibold '>Education:</p>
+          {doctor.education && (
+              <p className="w-[438px] text-[#DDAC68] text-[20px] leading-tight font-semibold">
+                Education: 
+              </p>
+            )}
               <p className='w-[438px] text-[#3C3C3B] text-[18px] leading-tight font-semibold '>{doctor.education}</p>
               <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Specialty:</p>
-              <p className='w-[438px] text-[#3C3C3B] text-[18px] leading-tight font-semibold '>{doctor.education}</p>
-              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Experience:<span>{doctor.years}</span></p>
-              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Languages:<span>{doctor.language}</span></p>
+              <p className='w-[438px] text-[#3C3C3B] text-[18px] leading-tight font-semibold '>{doctor.speciality}</p>
+              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Experience:<span className='text-black pl-2'>{doctor.years}</span></p>
+              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Languages:<span className='text-black pl-2'>{doctor.language}</span></p>
             </div>
         </div>
         <div className="flex w-full relative">
