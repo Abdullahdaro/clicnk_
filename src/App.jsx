@@ -15,20 +15,20 @@ import Europe from "./component/Europe";
 const App = () => {
   return (
     <div className="bg-primary  w-full overflow-hidden">
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth} fixed`}>
+      <div className={``}>
+        <div className={`z-20 fixed`}>
           <Constant />
         </div>
       </div>
 
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth} `}>
+      <div className={`bg-primary `}>
+        <div className={``}>
           <Main />
         </div>
       </div>
 
-      <div className={`bg-primary ${styles.flexStart}`}>
-        <div className={`${styles.boxWidth} `}>
+      <div className={`bg-primary `}>
+        <div className={` `}>
           <Teeth />
           <Value />
           <Reviews />

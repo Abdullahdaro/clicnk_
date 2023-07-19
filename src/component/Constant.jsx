@@ -2,12 +2,12 @@ import React from 'react'
 
 const Constant = () => {
   return (
-    <div className='container'>
-      <div className='absolute top-0 left-0'>
+    <div className='relative flex justify-between items-center'>
+      <div className=' absolute top-0 left-0'>
         <div className='bg-main border rounded-r-[50px] text-3xl flex flex-row'>
           <div className='px-2'>Tr</div>
-          <div className='px-2'>en</div>
-          <div className='px-2'>ar</div>
+          <div className='px-2'>En</div>
+          <div className='px-2'>Ar</div>
         </div>
       </div>
       <div className='absolute top-0 right-0'>
