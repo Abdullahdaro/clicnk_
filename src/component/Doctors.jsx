@@ -60,6 +60,32 @@ const doctors = [
 
 const Doctors = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sm, setSm] = useState(window.innerWidth <= 1200);
+  const [xs, setXS] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    function handleResize() {
+      setXS(window.innerWidth <= 640);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setSm(window.innerWidth <= 1200);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handlePrev = () => {
     if (currentIndex > 0) {
@@ -92,41 +118,40 @@ const Doctors = () => {
   return (
     <div className='flex flex-col items-center'>
       <div className='items-center flex py-10 justify-center'>
-        <h1 className='text-[50px] font-bold bg-[#DDAC68] bg-opacity-10 px-8 py-2 rounded-[40px]'>Our Specialist Doctors</h1>
+        <h1 className='sm:text-[50px] xs:text-[30px]  font-bold bg-[#DDAC68] bg-opacity-10 px-8 py-2 rounded-[40px]'>Our Specialist Doctors</h1>
       </div>
-      <div className={`justify-center flex items-start`}>
-        <div className='ml-16 pt-40 justify-center items-start flex flex-col'>
-          <h1 className='text-[40px] font-bold text-[#DDAC68] leading-tight w-[438px] '>{doctor.name}</h1>
-          <span className='text-[#3C3C3B] text-[18px] leading-tight font-semibold'>{doctor.way}</span>
+      <div className={` ${sm ? 'flex-col flex items-center text-center' : 'flex justify-center items-start'} `}>
+        <div className='md:ml-16 xs:ml-0 xs:pt-2 md:pt-40 justify-center xs:items-center sm:items-start flex flex-col'>
+          <h1 className='sm:text-[40px] xs:text-[36px] font-bold xs:px-10 sm:px-0 text-[#DDAC68] leading-tight w-[438px] '>{doctor.name}</h1>
+          <span className='text-[#3C3C3B] xs: text-[18px] leading-tight font-semibold'>{doctor.way}</span>
           <div className='pt-14'>
           {doctor.education && (
               <p className="w-[438px] text-[#DDAC68] text-[20px] leading-tight font-semibold">
                 Education: 
               </p>
             )}
-              <p className='w-[438px] text-[#3C3C3B] text-[18px] leading-tight font-semibold '>{doctor.education}</p>
-              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Specialty:</p>
-              <p className='w-[438px] text-[#3C3C3B] text-[18px] leading-tight font-semibold '>{doctor.speciality}</p>
-              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Experience:<span className='text-black pl-2'>{doctor.years}</span></p>
+              <p className='w-[438px] text-[#3C3C3B] text-[18px] xs:px-10 sm:px-0 leading-tight font-semibold '>{doctor.education}</p>
+              <p className='w-[438px] xs:pt-2 sm:pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Specialty:</p>
+              <p className='w-[438px] text-[#3C3C3B] sm:text-[18px] xs:text-[16px] xs:px-10 sm:px-0 leading-tight font-semibold '>{doctor.speciality}</p>
+              <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Experience:<span className='text-black  pl-2'>{doctor.years}</span></p>
               <p className='w-[438px] pt-8 text-[#DDAC68] text-[20px] leading-tight font-semibold '>Languages:<span className='text-black pl-2'>{doctor.language}</span></p>
             </div>
         </div>
         <div className="flex w-full relative">
-        <div className='items-end justify-end flex absolute bottom-0 transform left-[550px] z-0'>
+          <div className={`items-end justify-end flex absolute bottom-0 transform left-[550px] z-0 ${xs ? 'hidden' : ''} `}>
               <img src={nextReview.image} alt={nextReview.name} className="w-80 justify-end filter lightgray-50 blur-[2px]" />
           </div>
           <div className="flex justify-center  w-[700px] relative">
             <button
-              className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 left-2"
-              onClick={handlePrev}
+              className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute ${xs ? 'relative' : ''} z-10 top-1/2 transform -translate-y-1/2 left-2`}
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <div className="relative">
+            <div className={`relative ${xs ? 'w-1/3' : ''}`}>
               <img src={doctor.image} alt={doctor.name} className="w-[500px] z-10 button-0" />
             </div>
             <button
-              className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2"
+              className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2 ${xs ? 'relative' : ''}`}
               onClick={handleNext}
             >
               <FontAwesomeIcon icon={faChevronRight} />
