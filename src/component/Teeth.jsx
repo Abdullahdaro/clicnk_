@@ -6,6 +6,9 @@ import oldmansmile from '../assets/oldmansmile.png'
 import smilegirlteeth from '../assets/smilegirlteeth.png'
 import smileteeth from '../assets/smileteeth.png'
 import styles from '../styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const photos = [
@@ -37,6 +40,19 @@ const photos = [
 
 const teeth = () => {
     const [currentPhoto, setCurrentPhoto] = useState(0);
+    const [sm, setSm] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+      function handleResize() {
+        setSm(window.innerWidth <= 768);
+      }
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -57,10 +73,10 @@ const teeth = () => {
   return (
     <div className={`${styles.paddingY} sm:gird w-full items-center justify-center bg-bg md:flex`}>
         <div className=" p-10 flex flex-col  ">
-            <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Before & After</span>
-            <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Experience</span>
-            <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Reviews</span>    
-            <span className='border-main border my-3 text-[#3C3C3B] font-semibold text-xl text rounded-[40px] px-4 py-2'>Clinic</span>
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Before & After</span>
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Reviews</span>    
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Experience</span>
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Clinic</span>
             <button>
                 <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_1_311)">
@@ -87,36 +103,31 @@ const teeth = () => {
                 </svg>
             </button>
         </div>
-        <div className="grid gap-4 sm:ml-0  md:ml-24">
-            <div className="relative flex">
-                <div className=" w-full h-full  px-2 flex justify-between items-center">
-                    <button
-                            className=" hover:text-white text-white font-bold px-4 py-2 rounded-l"
-                            onClick={handlePrev}
-                        >
-                            <svg width="38" height="65" viewBox="0 0 38 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M32 6L6 32.5L32 59" stroke="#DDAC68" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                    </button>
-                </div>
-                <img
-                src={photos[currentPhoto].src}
-                alt={photos[currentPhoto].alt}
-                className="md:w-[600px] sm:w-max-[100px] h-auto rounded-[40px]"
-                />
-                <div className=" w-full h-full px-2 flex justify-between items-center">
-                    
-                    <button
-                        className=" text-white font-bold px-4 py-2 rounded-r"
-                        onClick={handleNext}
-                    >
-                        <svg width="38" height="65" viewBox="0 0 38 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 59L32 32.5L6 6" stroke="#DDAC68" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div className="grid gap-4 sm:ml-0 md:ml-24">
+  <div className="relative flex">
+    <div className="w-full h-full px-2 flex justify-end items-center">
+      <button
+        className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+        onClick={handlePrev}
+      >
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
+    </div>
+    <img
+      src={photos[currentPhoto].src}
+      alt={photos[currentPhoto].alt}
+      className={`w-full ${sm ? 'max-w-[200px]' : 'max-w-[550px]'} h-auto rounded-[40px]`}
+    />
+    <div className="w-full h-full px-2 flex justify-between items-center">
+      <button
+        className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+        onClick={handleNext}
+      >
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button> 
+    </div>
+  </div>
+</div>
     </div>
   )
 }

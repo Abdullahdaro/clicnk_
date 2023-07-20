@@ -31,6 +31,32 @@ const reviews = [
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sm, setSm] = useState(window.innerWidth <= 1200);
+  const [xs, setXS] = useState(window.innerWidth <= 640);
+
+  useEffect(() => {
+    function handleResize() {
+      setXS(window.innerWidth <= 640);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setSm(window.innerWidth <= 1200);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handlePrev = () => {
     if (currentIndex > 0) {
@@ -62,37 +88,37 @@ const Reviews = () => {
 
   return (
     <div className={`flex bg-[#DDAC681A] flex-col items-center justify-center}`}>
-      <div className={`  justify-center flex items-start`}>
-        <div className='ml-16 justify-start items-start flex pt-40 flex-col'>
-          <h1 className='text-[50px] font-bold text-[#DDAC68] leading-tight w-[438px] '>{review.treatment}</h1>
+      <div className={`${sm ? 'flex-col-reverse' : 'flex'}`}>
+        <div className={` ${sm ? ' justify-center items-center ml-10 flex-col flex' : 'justify-start ml-16 items-start flex flex-col'} pt-40`}>
+          <h1 className={`text-[50px] font-bold w-[500px] text-[#DDAC68] leading-tight ${xs ? 'text-[30px] ml-6 w-1/2' : ''}`}>{review.treatment}</h1>
           <span className='text-[#3C3C3B] text-[18px] leading-tight font-semibold'>{review.way}</span>
-          <div className='pt-14'>
-              <p className='w-[438px] text-[#3C3C3B] text-[22px] leading-tight font-semibold '>{review.review}</p>
-              <div className='flex mt-16 flex-col'>
-                <span>{review.name}</span>
-                <span>{review.country}</span>
+          <div className={`pt-14 ${sm ? 'flex flex-col items-center' : ''}`}>
+              <p className={` text-[#3C3C3B] text-[22px] leading-tight font-semibold ${xs ? 'text-[16px] text-center pr-[190px] px-40 items-center flex' : 'w-[380px]'}`}>{review.review}</p>
+              <div className={`flex mt-16 flex-col ${sm ? 'flex flex-col items-center' : ''}`}>
+                <span className='text-[#3C3C3B] text-2xl font-bold'>{review.name}</span>
+                <span className='text-[#3C3C3B] text-sm'>{review.country}</span>
               </div>
             </div>
         </div>
         <div className="flex w-full relative">
-        <div className='items-end justify-end flex absolute bottom-0 transform left-[550px] z-0'>
-              <img src={nextReview.image} alt={nextReview.name} className="w-80 justify-end opacity-40" />
+          <div className={`items-end justify-end flex absolute bottom-0 transform left-[550px] z-0 ${xs ? 'hidden' : ''} `}>
+              <img src={nextReview.image} alt={nextReview.name} className="w-80 justify-end blur-[2px]" />
           </div>
-          <div className="flex justify-center  w-[700px] relative">
+          <div className="flex justify-center w-[700px] relative">
             <button
-              className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 left-2"
+              className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute ${xs ? 'relative' : ''} z-10 top-1/2 transform -translate-y-1/2 left-2`}
               onClick={handlePrev}
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
-            <div className="relative">
+            <div className={`relative ${xs ? 'w-1/3' : ''}`}>
               <img src={review.image} alt={review.name} className="w-[500px] z-10 button-0" />
               <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] opacity-90 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded">
                 <FontAwesomeIcon icon={faCirclePlay} />
               </button>
             </div>
             <button
-              className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2"
+              className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2 ${xs ? 'relative' : ''}`}
               onClick={handleNext}
             >
               <FontAwesomeIcon icon={faChevronRight} />

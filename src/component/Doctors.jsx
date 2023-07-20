@@ -113,7 +113,7 @@ const Doctors = () => {
         </div>
         <div className="flex w-full relative">
         <div className='items-end justify-end flex absolute bottom-0 transform left-[550px] z-0'>
-              <img src={nextReview.image} alt={nextReview.name} className="w-80 justify-end filter opacity-50 lightgray-50" />
+              <img src={nextReview.image} alt={nextReview.name} className="w-80 justify-end filter lightgray-50 blur-[2px]" />
           </div>
           <div className="flex justify-center  w-[700px] relative">
             <button

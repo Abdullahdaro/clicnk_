@@ -4,7 +4,7 @@ import styles from '../styles'
 const Value = () => {
   return (
     <div className={`${styles.paddingY}`}>
-        <div class=" absolute left-1/2 transform -translate-x-1/2 -translate-y-3467 sm:text-3xl md:text-[50px] xl:text-[75px] flex leading-90 tracking-tighter capitalize text-main">
+        <div class=" absolute left-1/2 transform font-semibold -translate-x-1/2 -translate-y-3467 sm:text-3xl md:text-[50px] xl:text-[75px] flex leading-90 tracking-tighter capitalize text-main">
             Value Added Benefits
         </div>
         <div class="flex flex-wrap justify-center p-10 gap-4 sm:mt-10 md:mt-20">
