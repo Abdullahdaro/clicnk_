@@ -27,7 +27,7 @@ const main = () => {
 <div className={`flex flex-col w-full items-center relative `}>
   <img className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
   <img className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-50 blur-sm' : 'opacity-100'}`} src={main1} alt="Main1" />
-  <div className={`z-10 flex pb-4 xs:pb-40 items-start justify-center ${sm ? 'pt-20' : 'pt-0' }`}>
+  <div className={`z-10 flex pb-4  items-start justify-center ${sm ? 'pt-20' : 'pt-0' }`}>
     <div>
       <img src={Picture2} className={` ${sm ? 'w-[200px]' : 'w-[300px]'}  `}/>
     </div>
@@ -35,10 +35,10 @@ const main = () => {
       <img src={Picture1} className={` ${sm ? 'w-[200px]' : 'w-[300px]'}  `} />
     </div>
   </div>
-  <div className='z-10 flex pt-4 xs:pt-40 pb-4 xs:pb-40 flex-col'>
+  <div className='z-10 flex pt-4 pb-4 flex-col'>
     <div className='flex flex-col w-full z-10'>
       <div className={` ${sm ? 'justify-end items-center flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4 xs:pr-60  xs:items-center`}>
-        <div className='z-10 pl-4 xs:pl-10'>
+        <div className='z-10 pl-4'>
           <img src={Picture3} className='w-[100px]' />
         </div>
         <div>
