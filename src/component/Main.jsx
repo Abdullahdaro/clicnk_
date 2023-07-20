@@ -26,7 +26,7 @@ const main = () => {
   return (
 <div className={`flex flex-col w-full items-center relative `}>
   <img className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
-  <img className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-70' : 'opacity-100'}`} src={main1} alt="Main1" />
+  <img className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-50 blur-sm' : 'opacity-100'}`} src={main1} alt="Main1" />
   <div className={`z-10 flex pb-4 xs:pb-40 items-start justify-center ${sm ? 'pt-20' : 'pt-0' }`}>
     <div>
       <img src={Picture2} className={` ${sm ? 'w-[200px]' : 'w-[300px]'}  `}/>

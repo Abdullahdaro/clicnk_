@@ -1,7 +1,21 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 
 const HowItWorks = () => {
+    const [sm, setSm] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+      function handleResize() {
+        setSm(window.innerWidth <= 768);
+      }
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     
   return (
     <div className={`bg-bg1 pt-6 pb-6`}>
@@ -12,6 +26,9 @@ const HowItWorks = () => {
             <div className='pl-10'>
                 <div>
                     <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[22px] font-semibold'>Submit a reguest</h1>
+                </div>
+                <div className='flex'>
+                    <span className='px-4 text-[35px] font-bold text-[#DDAC68] bg-[#DDAC68] bg-opacity-20 rounded-xl'>1</span>
                 </div>
                 <svg width="107" height="50" viewBox="0 0 107 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.9258 36.3008V17.043C22.2227 17.5117 21.4805 18.0195 20.6992 18.5664C19.931 19.1133 19.2214 19.6081 18.5703 20.0508L17.0078 16.3203L22.7695 11.4961H28.1602V36.3008H22.9258Z" fill="#DDAC68"/>
@@ -100,8 +117,6 @@ const HowItWorks = () => {
                 </div>
             </div>
         </div>
-
-
     </div>
   )
 }

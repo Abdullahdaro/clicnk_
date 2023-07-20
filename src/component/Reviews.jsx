@@ -90,7 +90,7 @@ const Reviews = () => {
     <div className={`flex bg-[#DDAC681A] flex-col items-center justify-center}`}>
       <div className={`${sm ? 'flex-col-reverse' : 'flex'}`}>
         <div className={` ${sm ? ' justify-center items-center ml-10 flex-col flex' : 'justify-start ml-16 items-start flex flex-col'} pt-40`}>
-          <h1 className={`text-[50px] font-bold w-[500px] text-[#DDAC68] leading-tight ${xs ? 'text-[30px] ml-6 w-1/2' : ''}`}>{review.treatment}</h1>
+          <h1 className={` font-bold text-[#DDAC68] leading-tight ${xs ? 'text-[30px] w-1/2 ml-6' : 'text-[50px]  w-[500px]'}`}>{review.treatment}</h1>
           <span className='text-[#3C3C3B] text-[18px] leading-tight font-semibold'>{review.way}</span>
           <div className={`pt-14 ${sm ? 'flex flex-col items-center' : ''}`}>
               <p className={` text-[#3C3C3B] text-[22px] leading-tight font-semibold ${xs ? 'text-[16px] text-center pr-[190px] px-40 items-center flex' : 'w-[380px]'}`}>{review.review}</p>
