@@ -10,6 +10,7 @@ import Partner from "./component/Partner";
 import Digitalsmile from "./component/Digitalsmile";
 import Doctors from "./component/Doctors";
 import Europe from "./component/Europe";
+import Advertisement from "./component/Advertisement";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       <div className={`bg-primary `}>
         <div className={` `}>
           <Teeth />
+          <Advertisement />
           <Value />
           <Reviews />
           <HowItWorks /> 

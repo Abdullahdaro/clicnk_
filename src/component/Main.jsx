@@ -36,8 +36,8 @@ const main = () => {
     </div>
   </div>
   <div className='z-10 flex pt-4 pb-4 flex-col'>
-    <div className='flex flex-col w-full z-10'>
-      <div className={` ${sm ? 'justify-end items-center flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4 xs:pr-60  xs:items-center`}>
+    <div className='flex xs:flex-col md:flex-row w-full z-10'>
+      <div className={` ${sm ? 'justify-end items-center flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4  xs:items-center`}>
         <div className='z-10 pl-4'>
           <img src={Picture3} className='w-[100px]' />
         </div>
@@ -48,8 +48,8 @@ const main = () => {
           <img src={Picture5} className='w-[300px]' />
         </div>
       </div>
-      <div className='z-10 xs:w-[300px] xs:h-[450px] hidden sm:flex bg-white rounded-[40px] py-4 xs:py-10 items-center flex flex-col shadow-xl xs:ml-8 mt-4 xs:mt-8 xs:ml-8'>
-        <h1 className='text-2xl font-bold text-main mb-4 xs:mb-8'>Get A Free Quote</h1>
+      <div className='z-10 xs:hidden sm:hidden mb-10 bg-white rounded-[40px] py-4 px-8 items-center md:flex flex-col shadow-xl mt-4'>
+        <h1 className='text-2xl font-bold text-main mb-4'>Get A Free Quote</h1>
         <form className="flex flex-col">
           <div className='w-full mb-4 xs:mb-10'>
             <h2 className='text-main text-base font-semibold leading-[90.443%] tracking-tighter w-60 capitalize'>Full Name</h2>
@@ -62,7 +62,7 @@ const main = () => {
             <input className='w-full h-12 border-none text-[10px] hover:bg-slate-100' type='text' required placeholder='Your Message' />
             <div className='border my-2'></div>
           </div>
-          <div className='flex mt-4 xs:mt-14 pl-4 xs:pl-11 items-center'>
+          <div className='flex mt-4 xs:mt- pl-4 xs:pl-11 items-center'>
             <button className='items-center bg-main rounded-[40px] px-8 py-2 text-white font-bold'>Submit Now</button>
           </div>
         </form>
