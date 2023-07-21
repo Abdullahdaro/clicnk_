@@ -68,3 +68,30 @@
 .custom-text {
   line-height: 0.8; /* Adjust this value to your preference */
 }
+
+.slider-container {
+  width: 100vw;
+}
+
+/* For horizontal scrolling, use flex with overflow-x-auto */
+.slider {
+  display: flex;
+  overflow-x-auto;
+}
+
+/* Set the animation to slide to the left */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply the animation to the slider class with a duration of 20s and infinite loop */
+.slider.animated {
+  animation-name: slide;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
