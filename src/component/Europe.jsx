@@ -18,8 +18,8 @@ const Europe = () => {
             <div className='text-[#3C3C3B] font-bold text-4xl pl-20'>
                 Qualident Is the Award-Winning <br /> Clinic Of <span className='text-[#DDAC68]'>Turkey And Europe</span>
             </div>
-            <div className='flex pl-10 pt-10'>
-                <div className='flex flex-col w-[800px]'>
+            <div className='flex sm:pl-10 xs:pl-0 xs:flex-col pt-10 '>
+                <div className='flex flex-col sm:w-[800px] xs:w-full'>
                     <div className='flex relative py-2 items-center'>
                         <div className="relative w-40 h-40">
                             <div className="absolute inset-0 rounded-full bg-bg filter blur-lg"></div>
@@ -34,7 +34,7 @@ const Europe = () => {
                         </div>
                             <span className='font-bold text-2xl pl-10'> Turkey Best MEdical <br /> Team Award</span>
                     </div>   
-                    <button className='mt-5'>
+                    <button className='mt-5 flex xs:ml-20'>
                         <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_1_311)">
                         <rect x="4" width="336" height="92" rx="15" fill="url(#paint0_linear_1_311)"/>
@@ -60,13 +60,13 @@ const Europe = () => {
                         </svg>
                     </button>
                 </div>
-                <div className='items-start pl-10 gap-2 flex flex-wrap'>
-                    <img src={pic1} className='w-[200px] h-[250px] rounded-md' />
-                    <img src={pic2} className='w-[200px] h-[250px] rounded-md ' />
-                    <img src={pic3} className='w-[200px] h-[250px] rounded-md' />
-                    <img src={pic4} className='w-[200px] h-[200px] rounded-md ' />
-                    <img src={pic5} className='w-[200px] h-[200px] rounded-md ' />
-                    <img src={pic7} className='w-[200px] h-[200px] rounded-md ' />
+                <div className='sm:items-start xs:items-center pl-10 gap-2 flex flex-wrap'>
+                    <img src={pic1} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md' />
+                    <img src={pic2} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md ' />
+                    <img src={pic3} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md' />
+                    <img src={pic4} className='sm:w-[200px] sm:h-[200px] xs:w-[150px] xs:h-[150px] rounded-md ' />
+                    <img src={pic5} className='sm:w-[200px] sm:h-[200px] xs:w-[150px] xs:h-[150px] rounded-md ' />
+                    <img src={pic7} className='sm:w-[200px] sm:h-[200px] xs:w-[150px] xs:h-[150px] rounded-md ' />
                 </div>
             </div>
         </div>
