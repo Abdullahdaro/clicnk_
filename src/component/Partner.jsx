@@ -121,9 +121,9 @@ const Partner = () => {
     <div className={`${styles.paddingY} flex justify-center items-center flex-col`}>
         <div className='justify-center xl:max-w-[1280px] flex flex-col items-center'>       
             <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR PARTNERS IN USA</h1>
-            <div className='flex p-10 gap-20'>
-                <img src={partner} className='w-auto h-32' />
-                <img src={partner2} className='w-[450px] h-32' />
+            <div className='flex p-10 md:gap-20 xs:gap-4'>
+                <img src={partner} className='sm:w-auto sm:h-32 xs:w-[100px]' />
+                <img src={partner2} className='sm:w-[450px] sm:h-32 xs:w-[200px]' />
             </div>
             <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR SOLUTION PARTNERS</h1>
             <div className='slider-container pt-6 overflow-hidden'>
@@ -136,16 +136,16 @@ const Partner = () => {
                 <img src={logo6} className='w-[400px] h-20 px-20' />
               </div>
             </div>
-            <div className='xs:flex-col md:flex flex justify-between xs:pt-10 md:pt-0 px-10 items-center'>
+            <div className='xs:flex-col md:flex flex justify-between xs:pt-10 md:pt-0 md:px-10 xs:px-40 items-center'>
               <div className='w-1/2 justify-between flex flex-col gap-7'>
-                <div className='flex'>
-                  <div>
-                    <h1 className='text-2xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
-                    <span>We pride ourselves on the best quality customer services in Turkey and Europe backed by decades of clinical experience. Our belief is that healthy mouths always lead to healthy bodies.</span>
+                <div className='md:flex-row flex xs:flex-col'>
+                  <div className=' text-center'>
+                    <h1 className='md:text-2xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
+                    <span className='xs:text-sm sm:text-md '>We pride ourselves on the best quality customer services in Turkey and Europe backed by decades of clinical experience. Our belief is that healthy mouths always lead to healthy bodies.</span>
                   </div>
-                  <div>
-                    <h1>We Speak Multiple Languages</h1>
-                    <span>Our doctors and medical team speak multiple languages where they can communicate directly with our patients to make sure all their dental needs are met.</span>
+                  <div className='xs:text-center sm:text-start'>
+                    <h1 className='md:text-2xl xs:text-xl font-bold text-[#DDAC68]'>We Speak Multiple Languages</h1>
+                    <span className='xs:text-sm sm:text-md '>Our doctors and medical team speak multiple languages where they can communicate directly with our patients to make sure all their dental needs are met.</span>
                   </div>
                 </div>
                 <div className='flex xs:grid xs:grid-cols-2 pt-10 gap-12'>
@@ -155,7 +155,7 @@ const Partner = () => {
                   <img src={speak1} className='w-[140px] h-14' />
                 </div>
               </div>
-              <div className='flex flex-col px-6'>
+              <div className='flex xs:items-center sm:items-start xs:pt-8 sm:pt-0 flex-col px-6'>
                 <img src={picture3} className='w-[200px] h-18' />
                 <h1>Istanbul, Turkey</h1>
                 <span>Hamidiye, Cendere Cd. No:103 <br /> D:1B, 34398 Kâğıthane/ <br /> İstanbul/Türkiye</span>

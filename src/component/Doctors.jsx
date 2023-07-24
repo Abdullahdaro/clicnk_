@@ -148,7 +148,11 @@ const Doctors = () => {
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
             <div className={`relative ${xs ? 'w-1/3' : ''}`}>
-              <img src={doctor.image} alt={doctor.name} className="w-[500px] z-10 button-0" />
+            <img
+                src={doctor.image}
+                alt={doctor.name}
+                className="w-[500px] z-10 button-0"
+              />
             </div>
             <button
               className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2 ${xs ? 'relative' : ''}`}
