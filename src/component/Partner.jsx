@@ -119,7 +119,7 @@ const Partner = () => {
 
   return (
     <div className={`${styles.paddingY} flex justify-center items-center flex-col`}>
-        <div className='justify-center xl:max-w-[1280px] flex flex-col items-center'>       
+        <div className='justify-center xl:max-w-[1400px] flex flex-col items-center'>       
             <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR PARTNERS IN USA</h1>
             <div className='flex p-10 md:gap-20 xs:gap-4'>
                 <img src={partner} className='sm:w-auto sm:h-32 xs:w-[100px]' />
@@ -136,10 +136,10 @@ const Partner = () => {
                 <img src={logo6} className='w-[400px] h-20 px-20' />
               </div>
             </div>
-            <div className='xs:flex-col md:flex flex justify-between xs:pt-10 md:pt-0 md:px-10 xs:px-40 items-center'>
+            <div className='xs:flex-col md:flex-row flex justify-between xs:pt-10 md:pt-0 md:px-10 xs:px-40 items-center'>
               <div className='w-1/2 justify-between flex flex-col gap-7'>
                 <div className='md:flex-row flex xs:flex-col'>
-                  <div className=' text-center'>
+                  <div className='xs:text-center sm:text-start'>
                     <h1 className='md:text-2xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
                     <span className='xs:text-sm sm:text-md '>We pride ourselves on the best quality customer services in Turkey and Europe backed by decades of clinical experience. Our belief is that healthy mouths always lead to healthy bodies.</span>
                   </div>
@@ -148,7 +148,7 @@ const Partner = () => {
                     <span className='xs:text-sm sm:text-md '>Our doctors and medical team speak multiple languages where they can communicate directly with our patients to make sure all their dental needs are met.</span>
                   </div>
                 </div>
-                <div className='flex xs:grid xs:grid-cols-2 pt-10 gap-12'>
+                <div className='sm:flex xs:grid xs:grid-cols-2 sm:flex-row pt-10 gap-12'>
                   <img src={tursab} className='w-[100px] h-16' />
                   <img src={patient} className='w-[140px] h-14' />
                   <img src={speak} className='w-[140px] h-14' />

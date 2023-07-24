@@ -18,7 +18,7 @@ const Europe = () => {
             <div className='text-[#3C3C3B] font-bold text-4xl pl-20'>
                 Qualident Is the Award-Winning <br /> Clinic Of <span className='text-[#DDAC68]'>Turkey And Europe</span>
             </div>
-            <div className='flex sm:pl-10 xs:pl-0 xs:flex-col pt-10 '>
+            <div className='flex sm:pl-10 xs:pl-0 xs:flex-col sm:flex-row pt-10 '>
                 <div className='flex flex-col sm:w-[800px] xs:w-full'>
                     <div className='flex relative py-2 items-center'>
                         <div className="relative w-40 h-40">
@@ -60,7 +60,7 @@ const Europe = () => {
                         </svg>
                     </button>
                 </div>
-                <div className='sm:items-start xs:items-center pl-10 gap-2 flex flex-wrap'>
+                <div className='sm:items-start xs:items-center pl-10 gap-2 max-w-[800px] flex flex-wrap'>
                     <img src={pic1} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md' />
                     <img src={pic2} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md ' />
                     <img src={pic3} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md' />

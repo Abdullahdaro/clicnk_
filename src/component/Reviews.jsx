@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import styles from '../styles'
 import blackwoman from '../assets/blackwoman.png'
 import girlwithsmile from '../assets/girlwithsmile.png'
+import oldman from '../assets/oldman.png'
+import irangirl from '../assets/irangirl.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,14 +21,37 @@ const reviews = [
         country: 'USA'
     },
     {
-      name: 'John Doe',
+      name: 'Haifa M.     ',
       treatment: 'Q HollyWood Smile',
-      review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam id rhoncus luctus, nisl nunc aliquam urna, vitae aliquam nisl nunc eu nunc. Sed euismod, diam id rhoncus luctus, nisl nunc aliquam urna, vitae aliquam nisl nunc eu nunc.',
+      way: 'E-Max Zirconia Crowns',
+      review: '‘‘They kept in touch with me throughout the whole time to be sure I was fine after all the procedures’’      ',
       image: girlwithsmile,
       video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
       flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
       country: 'USA'
   },
+  { 
+    name: 'Pernaz S.',
+    treatment: 'Q HollyWood Smile',
+    way: 'E-Max Laminate Veneers',
+    review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
+    image: irangirl,
+    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+    flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
+    country: 'IRAN'
+  },
+  {   
+    name: 'Abdulaziz T.',
+    treatment: 'All-On-4/6 Dental Implant',
+    way: '',
+    review: '‘‘Special Thanks for warm welcome and the full support that was reserved for me.’’',
+    image: oldman,
+    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+    flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
+    country: 'ALGERiA'
+  },
+
+
 ]
 
 const Reviews = () => {

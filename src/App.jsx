@@ -16,8 +16,8 @@ import Advertisement from "./component/Advertisement";
 const App = () => {
   return (
     <div className="bg-primary  w-full overflow-hidden">
-      <div className={`w-full`}>
-        <div className={`z-20 w-full h-full`}>
+      <div className={`w-full `}>
+        <div className={`z-20 w-full h-full `}>
           <Constant />
         </div>
       </div>

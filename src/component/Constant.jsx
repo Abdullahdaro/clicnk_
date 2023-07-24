@@ -18,8 +18,8 @@ const Constant = () => {
     setActiveLang(lang);
   };
   return (
-    <div className='w-full flex justify-between items-center'>
-      <div className='fixed z-10 sm:top-10 sm:left-0 xs:top-0 xs:left-4'>
+    <div className='flex relative xl:max-w-[1280px] justify-between items-center'>
+      <div className='fixed z-20 sm:top-10 sm:left-0 xs:top-0 xs:left-4'>
         <div className='bg-[#D8A768] xs:flex-col bg-opacity-40  xs:rounded-b-[50px] xs:rounded-t-none xs:gap-3 xs:px-0 xs:py-2 sm:py-0 sm:rounded-r-[50px] sm:rounded-l-none text-xl font-semibold flex md:flex-row'>
           <button
             className={`sm:px-4 xs:px-2 sm:py-1 ${
@@ -47,7 +47,7 @@ const Constant = () => {
           </button>
         </div>
       </div>
-      <div className='fixed z-10 sm:top-10 sm:right-0 xs:top-0 xs:right-4'>
+      <div className='fixed z-20 sm:top-10 sm:right-0 xs:top-0 xs:right-4'>
         <div>
           <div className='bg-main text-white xs:flex-col md:flex-row flex xs:rounded-b-[50px] xs:rounded-t-none md:rounded-l-[50px] md:rounded-r-none text-xl xs:py-2xl px-2 xs:py-2 sm:pr-5'>
             <FontAwesomeIcon className='md:px-2 xs:py-2 sm:py-0' icon={faFacebook} />

@@ -6,7 +6,7 @@ export const advertisement = [
         title: 'Zirconium Crowns',
         description: 'Package',
         image: 'https://www.clicnk.com/assets/images/zirconium-crowns.png',
-        firstlink: 'E-Max Laminate veneers or crowns up to 24 teeth',
+        firstlink: 'Zirconium crowns up to 24 teeth',
         secondlink: 'Panoramic x-ray',
         thirdlink: 'Digital smile design',
         fourthlink: 'Non surgical procedure such as tooth extraction, filling, root canal, gingivectomy treatments',

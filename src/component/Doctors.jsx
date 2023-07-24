@@ -116,9 +116,9 @@ const Doctors = () => {
   const nextReview = doctors[nextIndex];
 
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col pt-10 items-center'>
       <div className='items-center flex py-10 justify-center'>
-        <h1 className='sm:text-[50px] xs:text-[30px]  font-bold bg-[#DDAC68] bg-opacity-10 px-8 py-2 rounded-[40px]'>Our Specialist Doctors</h1>
+        <h1 className='sm:text-[50px] xs:text-[30px] text-[#3C3C3B] font-bold bg-[#DDAC68] bg-opacity-10 px-8 py-2 rounded-[40px]'>Our Specialist Doctors</h1>
       </div>
       <div className={` ${sm ? 'flex-col flex items-center text-center' : 'flex justify-center items-start'} `}>
         <div className='md:ml-16 xs:ml-0 xs:pt-2 md:pt-40 justify-center xs:items-center sm:items-start flex flex-col'>
