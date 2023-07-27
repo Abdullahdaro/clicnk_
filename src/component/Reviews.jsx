@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import styles from '../styles'
 import blackwoman from '../assets/blackwoman.png'
+import maingirl from '../assets/maingirl.png'
 import girlwithsmile from '../assets/girlwithsmile.png'
 import oldman from '../assets/oldman.png'
 import irangirl from '../assets/irangirl.png'
+import usa from '../assets/usa.png'
+import iran from '../assets/iran.png'
+import algeria from '../assets/algeria.png'
+import uk from '../assets/uk.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,10 +20,10 @@ const reviews = [
         treatment: 'Q HollyWood Smile',
         way: 'ZirconilumCrowns',
         review: 'The process was easier, quicker and better than I expected',   
-        image: blackwoman,
+        image: maingirl,
         video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-        flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
-        country: 'USA'
+        flag: uk,
+        country: 'United Kingdom'
     },
     {
       name: 'Haifa M.     ',
@@ -27,7 +32,7 @@ const reviews = [
       review: '‘‘They kept in touch with me throughout the whole time to be sure I was fine after all the procedures’’      ',
       image: girlwithsmile,
       video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-      flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
+      flag: usa,
       country: 'USA'
   },
   { 
@@ -37,7 +42,7 @@ const reviews = [
     review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
     image: irangirl,
     video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-    flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
+    flag: iran,
     country: 'IRAN'
   },
   {   
@@ -47,11 +52,19 @@ const reviews = [
     review: '‘‘Special Thanks for warm welcome and the full support that was reserved for me.’’',
     image: oldman,
     video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-    flag: 'https://www.hollywoodsmilecostarica.com/wp-content/uploads/2019/10/american-dental-association.png',
+    flag: algeria,
     country: 'ALGERiA'
   },
-
-
+  {
+    name: 'Latoya W.',
+    treatment: 'ALL-ON-4/6 Dental Implant',
+    way: '',
+    review: '‘‘I received a quality smile, you have changed my life’’',
+    image: blackwoman,
+    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+    flag: iran,
+    country: 'IRAN'
+  }
 ]
 
 const Reviews = () => {
@@ -121,6 +134,7 @@ const Reviews = () => {
               <p className={` text-[#3C3C3B] text-[22px] leading-tight font-semibold ${xs ? 'text-[16px] text-center pr-[190px] px-40 items-center flex' : 'w-[380px]'}`}>{review.review}</p>
               <div className={`flex mt-16 flex-col ${sm ? 'flex flex-col items-center' : ''}`}>
                 <span className='text-[#3C3C3B] text-2xl font-bold'>{review.name}</span>
+                <img src={review.flag} className='w-[50px] mt-2' />
                 <span className='text-[#3C3C3B] text-sm'>{review.country}</span>
               </div>
             </div>

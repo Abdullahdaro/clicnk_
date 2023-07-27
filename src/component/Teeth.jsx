@@ -107,7 +107,7 @@ const teeth = () => {
   <div className="relative flex">
     <div className="w-full h-full px-2 flex justify-end items-center">
       <button
-        className="hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+        className="hover:scale-125 text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
         onClick={handlePrev}
       >
         <FontAwesomeIcon icon={faChevronLeft} />

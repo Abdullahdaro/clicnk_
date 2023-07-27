@@ -15,24 +15,24 @@ const Europe = () => {
   return (
     <div className={`${styles.paddingY} flex items-center flex-col bg-[#DDAC680F]`}>
         <div className='xl:max-w-[1280px]'>
-            <div className='text-[#3C3C3B] font-bold text-4xl pl-20'>
+            <div className='text-[#3C3C3B] font-bold xs:text-xl sm:text-4xl xs:pl-10 md:pl-20'>
                 Qualident Is the Award-Winning <br /> Clinic Of <span className='text-[#DDAC68]'>Turkey And Europe</span>
             </div>
-            <div className='flex sm:pl-10 xs:pl-0 xs:flex-col sm:flex-row pt-10 '>
+            <div className='flex sm:pl-10 xs:pl-0 xs:flex-col sm:flex-row xs:pt-0 sm:pt-10 '>
                 <div className='flex flex-col sm:w-[800px] xs:w-full'>
                     <div className='flex relative py-2 items-center'>
                         <div className="relative w-40 h-40">
                             <div className="absolute inset-0 rounded-full bg-bg filter blur-lg"></div>
                             <img src={reward1} className='w-40 z-10 relative' style={{ zIndex: 10 }} />
                         </div>
-                        <span className='font-bold text-2xl pl-10'>Europe Top Dental <br /> Practices Award</span>
+                        <span className='font-bold xs:text-xl md:text-2xl pl-10'>Europe Top Dental <br /> Practices Award</span>
                     </div>
                     <div className='flex relative py-2 items-center'>
                         <div className="relative w-40 h-40">
                             <div className="absolute inset-0 rounded-full bg-bg filter blur-lg"></div>
                             <img src={reward1} className='w-40 z-10 relative' style={{ zIndex: 10 }} />
                         </div>
-                            <span className='font-bold text-2xl pl-10'> Turkey Best MEdical <br /> Team Award</span>
+                            <span className='font-bold xs:text-xl md:text-2xl pl-10'> Turkey Best MEdical <br /> Team Award</span>
                     </div>   
                     <button className='mt-5 flex xs:ml-20'>
                         <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -8,7 +8,7 @@ const advertisement = [
       title: 'Zirconium Crowns',
       description: 'Package',
       image: Picture10,
-      firstlink: 'E-Max Laminate veneers or crowns up to 24 teeth',
+      firstlink: 'Zirconium crowns up to 24 teeth',
       secondlink: 'Panoramic x-ray',
       thirdlink: 'Digital smile design',
       fourthlink: 'Non surgical procedure such as tooth extraction, filling, root canal, gingivectomy treatments',
