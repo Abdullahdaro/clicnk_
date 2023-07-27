@@ -67,8 +67,10 @@ const Constant = () => {
           </div>
         </div>
       </div>
-      <div className='fixed z-10 xs:bottom-6 md:bottom-2 right-0'>
-        <img src={whatsapp} className='w-[60px] h-[60px] md:mr-10 xs:mr-4' />
+      <div className='fixed z-20 xs:bottom-6 md:bottom-2 right-0'>
+        <a href='https://api.whatsapp.com/send?phone=905308309219' target='_blank' rel='noopener noreferrer'>
+          <img src={whatsapp} className='w-[60px] h-[60px] md:mr-10 xs:mr-4 hover:scale-125' alt='WhatsApp' />
+        </a>
       </div>
     </div>
   )
