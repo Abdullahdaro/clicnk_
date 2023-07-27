@@ -95,3 +95,12 @@
   animation-duration: 20s;
   animation-iteration-count: infinite;
 }
+
+
+.icon {
+  transition: transform 0.3s ease; /* Adding a transition for the 'transform' property */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Scale the icon by 1.2 (20% bigger) on hover */
+}

@@ -122,37 +122,37 @@ const Partner = () => {
         <div className='justify-center xl:max-w-[1400px] flex flex-col items-center'>       
             <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR PARTNERS IN USA</h1>
             <div className='flex p-10 md:gap-20 xs:gap-4'>
-                <img src={partner} className='sm:w-auto sm:h-32 xs:w-[100px]' />
-                <img src={partner2} className='sm:w-[450px] sm:h-32 xs:w-[200px]' />
+                <img src={partner} className='sm:w-auto sm:h-16 xs:w-[100px]' />
+                <img src={partner2} className='sm:w-[350px]  xs:w-[200px]' />
             </div>
             <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR SOLUTION PARTNERS</h1>
             <div className='slider-container pt-6 overflow-hidden'>
               <div className='slider flex pt-5' ref={sliderRef}>
-                <img src={logo1} className='w-[400px] h-20 px-20' />
-                <img src={logo2} className='w-[400px] h-20 px-20' />
-                <img src={logo3} className='w-[400px] h-20 px-20 transform scale-[200%] transition-transform' />
-                <img src={logo4} className='w-[400px] h-20 px-20' />
-                <img src={logo5} className='w-[400px] h-20 px-20 scale-[200%] ' />
-                <img src={logo6} className='w-[400px] h-20 px-20' />
+                <img src={logo1} className='w-[400px] h-14 px-20' />
+                <img src={logo2} className='w-[400px] h-14 px-20' />
+                <img src={logo3} className='w-[400px] h-14 px-20 transform scale-[200%] transition-transform' />
+                <img src={logo4} className='w-[400px] h-14 px-20' />
+                <img src={logo5} className='w-[400px] h-14 px-20 scale-[200%] ' />
+                <img src={logo6} className='w-[400px] h-14 px-20' />
               </div>
             </div>
             <div className='xs:flex-col md:flex-row flex justify-between xs:pt-10 md:pt-10 md:px-10 xs:px-40 items-center'>
               <div className='w-1/2 justify-between flex flex-col gap-7'>
                 <div className='md:flex-row flex xs:flex-col'>
                   <div className='xs:text-center sm:text-start pr-4'>
-                    <h1 className='md:text-2xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
-                    <span className='xs:text-sm sm:text-lg font-semibold '>We pride ourselves on the best <br className='xs:hidden sm:flex' /> quality customer services in <br className='xs:hidden sm:flex' /> Turkey and Europe backed by <br className='xs:hidden sm:flex' /> decades of clinical experience. <br className='xs:hidden sm:flex' /> Our belief is that healthy mouths <br className='xs:hidden sm:flex' /> always lead to healthy bodies.</span>
+                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
+                    <span className='xs:text-sm sm:text-md font-semibold '>We pride ourselves on the best <br className='xs:hidden sm:flex' /> quality customer services in <br className='xs:hidden sm:flex' /> Turkey and Europe backed by <br className='xs:hidden sm:flex' /> decades of clinical experience. <br className='xs:hidden sm:flex' /> Our belief is that healthy mouths <br className='xs:hidden sm:flex' /> always lead to healthy bodies.</span>
                   </div>
                   <div className='xs:text-center sm:text-start px-4'>
-                    <h1 className='md:text-2xl xs:text-xl font-bold text-[#DDAC68]'>We Speak Multiple Languages</h1>
-                    <span className='xs:text-sm sm:text-lg font-semibold '>Our doctors and medical team speak <br className='xs:hidden sm:flex' /> multiple languages where they can <br className='xs:hidden sm:flex' /> communicate directly with our <br className='xs:hidden sm:flex' /> patients to make sure all their <br className='xs:hidden sm:flex' /> dental needs are met.</span>
+                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>We Speak Multiple Languages</h1>
+                    <span className='xs:text-sm sm:text-md font-semibold '>Our doctors and medical team speak <br className='xs:hidden sm:flex' /> multiple languages where they can <br className='xs:hidden sm:flex' /> communicate directly with our <br className='xs:hidden sm:flex' /> patients to make sure all their <br className='xs:hidden sm:flex' /> dental needs are met.</span>
                   </div>
                 </div>
-                <div className='sm:flex xs:grid xs:grid-cols-2 sm:flex-row gap-12'>
-                  <img src={tursab} className='w-[100px] h-16' />
-                  <img src={patient} className='w-[140px] h-14' />
-                  <img src={speak} className='w-[140px] h-14' />
-                  <img src={speak1} className='w-[140px] h-14' />
+                <div className='sm:flex xs:grid xs:grid-cols-2 sm:flex-row gap-8'>
+                  <img src={tursab} className='w-[100px] h-12' />
+                  <img src={patient} className='w-[100px] h-10' />
+                  <img src={speak} className='w-[110px] h-10' />
+                  <img src={speak1} className='w-[100px] h-10' />
                 </div>
               </div>
               <div className='flex xs:items-center sm:items-start xs:pt-8 sm:pt-0 flex-col px-6'>
