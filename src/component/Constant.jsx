@@ -19,6 +19,17 @@ const Constant = () => {
     // Additional code for language selection logic, if needed
   };
 
+  const [showGetQuote, setShowGetQuote] = useState(false);
+
+  useEffect(() => {
+    // Function to toggle the Get Quote button every 2 seconds
+    const interval = setInterval(() => {
+      setShowGetQuote((prev) => !prev);
+    }, 2000);
+
+    return () => clearInterval(interval); // Clear the interval on component unmount
+  }, []);
+
   return (
     <div className='flex relative xl:max-w-[1280px] justify-between items-center'>
       <div className='fixed z-20 md:top-10 md:left-0 xs:top-0 xs:left-4'>
@@ -67,10 +78,34 @@ const Constant = () => {
           </div>
         </div>
       </div>
-      <div className='fixed z-20 xs:bottom-6 md:bottom-2 right-0'>
+      <div className='z-20 xs:hidden sm:fixed md:bottom-2 right-0'>
         <a href='https://api.whatsapp.com/send?phone=905308309219' target='_blank' rel='noopener noreferrer'>
           <img src={whatsapp} className='w-[60px] h-[60px] md:mr-10 xs:mr-4 hover:scale-125' alt='WhatsApp' />
         </a>
+      </div>
+      <div className='fixed z-20 xs:bottom-0 w-full sm:hidden'>
+      {/* Changing Button */}
+      {showGetQuote ? (
+        <button className='w-1/2 bg-main inline-flex items-center justify-center py-4 text-white font-bold text-lg'>
+          <h1 className='mr-2'>Free</h1>
+        </button>
+      ) : (
+        <a
+        href='https://forms.crm.hopmd.com/crm_form_vprxw/' 
+        className='w-1/2 bg-main inline-flex items-center justify-center py-4 text-white font-bold text-lg'>
+          <h1 className='mr-2'>Get a Free Quote</h1>
+        </a>
+      )}
+
+            {/* WhatsApp Button */}
+            <a
+        href='https://api.whatsapp.com/send?phone=905308309219'
+        target='_blank'
+        className='bg-[#74F58C] w-1/2 inline-flex items-center justify-center text-white py-4 font-bold text-lg'
+      >
+        {<FontAwesomeIcon icon={faWhatsapp} className='text-[15px] mr-4 scale-150' />}
+        WhatsApp
+      </a>
       </div>
     </div>
   )

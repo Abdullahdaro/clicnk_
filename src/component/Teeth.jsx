@@ -71,13 +71,14 @@ const teeth = () => {
       };
 
   return (
-    <div className={`${styles.paddingY} sm:gird w-full items-center justify-center bg-bg md:flex`}>
-        <div className=" p-10 flex flex-col  ">
-            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Before & After</span>
-            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Reviews</span>    
-            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Experience</span>
-            <span className='border-main border my-3 text-[#3C3C3B] font-bold text-xl text rounded-[40px] px-4 py-2'>Clinic</span>
-            <button>
+    <div className={`md:${styles.paddingY} sm:gird w-full items-center justify-center bg-bg md:flex`}>
+        <div className=" flex md:flex-col xs:gap-1 xs:justify-between md:gap-0 xs:px-4 md:px-0 ">
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4'>Before & After</span>
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4'>Reviews</span>    
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4'>Experience</span>
+            <span className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4'>Clinic</span>
+            <a
+             href='https://api.whatsapp.com/send?phone=905308309219'className='xs:hidden md:flex'>
                 <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_1_311)">
                 <rect x="4" width="336" height="92" rx="15" fill="url(#paint0_linear_1_311)"/>
@@ -101,13 +102,13 @@ const teeth = () => {
                 </linearGradient>
                 </defs>
                 </svg>
-            </button>
+            </a>
         </div>
         <div className="grid gap-4 sm:ml-0 md:ml-24">
   <div className="relative flex">
     <div className="w-full h-full px-2 flex justify-end items-center">
       <button
-        className="hover:scale-125 text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+        className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
         onClick={handlePrev}
       >
         <FontAwesomeIcon icon={faChevronLeft} />
@@ -116,11 +117,11 @@ const teeth = () => {
     <img
       src={photos[currentPhoto].src}
       alt={photos[currentPhoto].alt}
-      className={`w-full ${sm ? 'max-w-[200px]' : 'max-w-[550px]'} h-auto rounded-[40px]`}
+      className={`w-full ${sm ? 'max-w-[275px]' : 'max-w-[550px]'} h-auto rounded-[40px]`}
     />
     <div className="w-full h-full px-2 flex justify-between items-center">
       <button
-        className="hover:scale-125  text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+        className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
         onClick={handleNext}
       >
         <FontAwesomeIcon icon={faChevronRight} />

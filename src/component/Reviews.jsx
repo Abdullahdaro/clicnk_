@@ -9,6 +9,8 @@ import usa from '../assets/usa.png'
 import iran from '../assets/iran.png'
 import algeria from '../assets/algeria.png'
 import uk from '../assets/uk.png'
+import turkey from '../assets/turkey.png'
+import turkeyflag from '../assets/turkeyflag.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,17 +19,27 @@ import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-s
 const reviews = [
     {
         name: 'Elif S...',
-        treatment: 'Q HollyWood Smile',
-        way: 'ZirconilumCrowns',
-        review: 'The process was easier, quicker and better than I expected',   
+        treatment: 'Q Hollywood Smile',
+        way: 'Zirconia Crowns',
+        review: '‘‘The process was easier, quicker and better than I expected‘‘',   
         image: maingirl,
         video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
         flag: uk,
         country: 'United Kingdom'
     },
+    { 
+      name: 'Pernaz S.',
+      treatment: 'Q Hollywood Smile',
+      way: 'E-Max Laminate Veneers',
+      review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
+      image: irangirl,
+      video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+      flag: iran,
+      country: 'IRAN'
+    },
     {
       name: 'Haifa M.     ',
-      treatment: 'Q HollyWood Smile',
+      treatment: 'Q Hollywood Smile',
       way: 'E-Max Zirconia Crowns',
       review: '‘‘They kept in touch with me throughout the whole time to be sure I was fine after all the procedures’’      ',
       image: girlwithsmile,
@@ -35,15 +47,15 @@ const reviews = [
       flag: usa,
       country: 'USA'
   },
-  { 
-    name: 'Pernaz S.',
-    treatment: 'Q HollyWood Smile',
-    way: 'E-Max Laminate Veneers',
-    review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
-    image: irangirl,
+  {
+    name: 'Erkan C.',
+    treatment: 'All-On-4/6 Dental Implant',
+    way: '',
+    review: '‘‘‘I was unhappy with my appearance, I had forgotten to laugh. Now I realize that I can laugh, lucky me.’’’',
+    image: turkey,
     video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-    flag: iran,
-    country: 'IRAN'
+    flag: turkeyflag,
+    country: 'TURKEY'
   },
   {   
     name: 'Abdulaziz T.',

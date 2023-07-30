@@ -14,27 +14,27 @@ import pic7 from '../assets/pic7.png'
 const Europe = () => {
   return (
     <div className={`${styles.paddingY} flex items-center flex-col bg-[#DDAC680F]`}>
-        <div className='xl:max-w-[1280px]'>
-            <div className='text-[#3C3C3B] font-bold xs:text-xl sm:text-4xl xs:pl-10 md:pl-20'>
-                Qualident Is the Award-Winning <br /> Clinic Of <span className='text-[#DDAC68]'>Turkey And Europe</span>
+        <div className='xl:max-w-[1280px] xs:flex-col xs:items-center xs:justify-center'>
+            <div className='text-[#3C3C3B] font-bold xs:text-xl sm:text-4xl xs:pl-10 md:pl-20 xs:justify-center xs:flex-col'>
+                Qualident Is the Award-Winning Clinic Of <span className='text-[#DDAC68]'>Turkey And Europe</span>
             </div>
             <div className='flex sm:pl-10 xs:pl-0 xs:flex-col sm:flex-row xs:pt-0 sm:pt-10 '>
-                <div className='flex flex-col sm:w-[800px] xs:w-full'>
-                    <div className='flex relative py-2 items-center'>
+                <div className='flex xs:flex-row sm:flex-col sm:w-[800px] xs:w-full xs:items-center xs:justify-center'>
+                    <div className='flex xs:flex-col sm:flex-row relative py-2 items-center'>
                         <div className="relative w-40 h-40">
                             <div className="absolute inset-0 rounded-full bg-bg filter blur-lg"></div>
                             <img src={reward1} className='w-40 z-10 relative' style={{ zIndex: 10 }} />
                         </div>
-                        <span className='font-bold xs:text-xl md:text-2xl pl-10'>Europe Top Dental <br /> Practices Award</span>
+                        <span className='font-bold xs:text-md md:text-2xl xs:pl-0 md:pl-10'>Europe Top Dental <br /> Practices Award</span>
                     </div>
-                    <div className='flex relative py-2 items-center'>
+                    <div className='flex xs:flex-col sm:flex-row relative py-2 items-center'>
                         <div className="relative w-40 h-40">
                             <div className="absolute inset-0 rounded-full bg-bg filter blur-lg"></div>
-                            <img src={reward1} className='w-40 z-10 relative' style={{ zIndex: 10 }} />
+                            <img src={reward} className='w-40 z-10 relative' style={{ zIndex: 10 }} />
                         </div>
-                            <span className='font-bold xs:text-xl md:text-2xl pl-10'> Turkey Best MEdical <br /> Team Award</span>
+                            <span className='font-bold xs:text-md md:text-2xl pl-10'> Turkey Best Medical <br /> Team Award</span>
                     </div>   
-                    <button className='mt-5 flex xs:ml-20'>
+                    <button className='mt-5 flex xs:ml-20 xs:hidden md:flex'>
                         <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_1_311)">
                         <rect x="4" width="336" height="92" rx="15" fill="url(#paint0_linear_1_311)"/>

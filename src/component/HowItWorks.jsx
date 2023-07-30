@@ -26,9 +26,9 @@ const HowItWorks = () => {
 
     
   return (
-    <div className='justify-center pt-10 xs:hidden sm:flex'>
-        <div className={`bg-bg1 xl:max-w-[1280px] w-full pt-6 pb-6`}>
-            <div class="text-main items-center flex justify-center lg:text-[55px] leading-normal">
+    <div className='justify-center xs:hidden sm:flex'>
+        <div className={`bg-bg1 xl:max-w-[1280px] w-full pt-10 pb-6`}>
+            <div class="text-main items-center flex justify-center lg:text-[55px] leading-normal pb-10">
                 <h1 className='bg-[#DDAC68] px-20 rounded-[40px] font-semibold bg-opacity-10'>How it works</h1>
             </div>
             <div className='flex justify-between px-10 pt-4'>
@@ -36,7 +36,7 @@ const HowItWorks = () => {
                     <div>
                         <h1 className='text-[#3C3C3B] pt-8 xs:text-sm md:text-[22px] font-semibold'>Submit a reguest</h1>
                     </div>
-                    <div className='flex relative'>
+                    <div className='flex relative pt-4'>
                         <span className='sm:px-4 text-[35px] xs:px-2 font-bold text-[#DDAC68] bg-[#DDAC68] bg-opacity-20 sm:rounded-xl'>1</span>
                         <span className='text-[#3C3C3B] absolute sm:text-md font-semibold bg-[#DDAC68] bg-opacity-10 rounded-xl'><img src={icon} className='p-2 pl-10 ml-5 w-[85px] text-[35px]' /></span>
                     </div>
@@ -45,7 +45,7 @@ const HowItWorks = () => {
                     <div className='pt-5'>
                         <h1 className='text-[#3C3C3B] xs:text-sm sm:text-md md:text-[22px] flex flex-warp w-[400px] font-semibold'>Receive a treatment plan within 24 Hours</h1>
                     </div>
-                    <div className='flex relative'>
+                    <div className='flex relative pt-4'>
                         <span className='px-4 text-[35px] font-bold text-[#DDAC68] bg-[#DDAC68] bg-opacity-20 rounded-xl'>3</span>
                         <span className=' absolute font-semibold bg-[#DDAC68] bg-opacity-10 sm:rounded-xl'><img src={icon2} className='sm:p-2 sm:pl-10 sm:ml-5 xs:ml-8 sm:w-[85px] xs:w-[30px]' /></span>
                     </div>
@@ -54,7 +54,7 @@ const HowItWorks = () => {
                     <div>
                         <h1 className='text-[#3C3C3B] xs:text-sm sm:text-md md:text-[22px] font-semibold'>Get treated and fly back</h1>
                     </div>
-                    <div className='flex relative'>
+                    <div className='flex relative pt-4'>
                         <span className='px-4 text-[35px] font-bold text-[#DDAC68] bg-[#DDAC68] bg-opacity-20 rounded-xl'>5</span>
                         <span className='text-[#3C3C3B] absolute sm:text-md md:text-[22px] font-semibold bg-[#DDAC68] bg-opacity-10 rounded-xl'><img src={icon4} className='p-2 pl-10 ml-5 w-[85px] text-[35px]' /></span>
                     </div>
@@ -72,7 +72,7 @@ const HowItWorks = () => {
                         <span className='text-[#3C3C3B] absolute sm:text-md md:text-[22px] font-semibold bg-[#DDAC68] bg-opacity-10 rounded-xl'><img src={icon1} className='p-2 pl-10 ml-5 w-[85px] text-[35px]' /></span>
                     </div>
                     <div>
-                        <h1 className='text-[#3C3C3B] pt-8 sm:text-md md:text-[22px] w-[300px] font-semibold'>Qualident medical consultant will be in contact with you</h1>
+                        <h1 className='text-[#3C3C3B] pt-4 sm:text-md md:text-[22px] w-[300px] font-semibold'>Qualident medical consultant will be in contact with you</h1>
                     </div>
                 </div>
                 <div>
@@ -81,7 +81,7 @@ const HowItWorks = () => {
                         <span className='text-[#3C3C3B] absolute sm:text-md md:text-[22px] font-semibold bg-[#DDAC68] bg-opacity-10 rounded-xl'><img src={icon3} className='p-2 py-3 pl-10 ml-5 w-[85px] text-[35px]' /></span>
                     </div>
                     <div className=''>
-                        <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] flex flex-warp  w-[300px] font-semibold'>Arranging your medical trip</h1>
+                        <h1 className='text-[#3C3C3B] pt-4 sm:text-md md:text-[22px] flex flex-warp  w-[300px] font-semibold'>Arranging your medical trip</h1>
                     </div>
                 </div>
                 <div>
@@ -90,7 +90,7 @@ const HowItWorks = () => {
                         <span className='text-[#3C3C3B] absolute sm:text-md md:text-[22px] font-semibold bg-[#DDAC68] bg-opacity-10 rounded-xl'><img src={icon5} className='p-2 pl-10 ml-5 w-[85px] text-[35px]' /></span>
                     </div>
                     <div>
-                        <h1 className='text-[#3C3C3B] sm:text-md md:text-[22px] w-[300px] font-semibold'>Staying in touch with you after treatment</h1>
+                        <h1 className='text-[#3C3C3B] pt-4 sm:text-md md:text-[22px] w-[300px] font-semibold'>Staying in touch with you after treatment</h1>
                     </div>
                 </div>
             </div>

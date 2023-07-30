@@ -136,14 +136,14 @@ const Partner = () => {
                 <img src={logo6} className='w-[400px] h-14 px-20' />
               </div>
             </div>
-            <div className='xs:flex-col md:flex-row flex justify-between xs:pt-10 md:pt-10 md:px-10 xs:px-40 items-center'>
+            <div className='xs:flex-col-reverse md:flex-row flex justify-between xs:pt-10 md:pt-10 md:px-10 xs:px-40 items-center'>
               <div className='w-1/2 justify-between flex flex-col gap-7'>
                 <div className='md:flex-row flex xs:flex-col'>
-                  <div className='xs:text-center sm:text-start pr-4'>
+                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start pr-4'>
                     <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
                     <span className='xs:text-sm sm:text-md font-semibold '>We pride ourselves on the best <br className='xs:hidden sm:flex' /> quality customer services in <br className='xs:hidden sm:flex' /> Turkey and Europe backed by <br className='xs:hidden sm:flex' /> decades of clinical experience. <br className='xs:hidden sm:flex' /> Our belief is that healthy mouths <br className='xs:hidden sm:flex' /> always lead to healthy bodies.</span>
                   </div>
-                  <div className='xs:text-center sm:text-start px-4'>
+                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start px-4'>
                     <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>We Speak Multiple Languages</h1>
                     <span className='xs:text-sm sm:text-md font-semibold '>Our doctors and medical team speak <br className='xs:hidden sm:flex' /> multiple languages where they can <br className='xs:hidden sm:flex' /> communicate directly with our <br className='xs:hidden sm:flex' /> patients to make sure all their <br className='xs:hidden sm:flex' /> dental needs are met.</span>
                   </div>
@@ -155,20 +155,32 @@ const Partner = () => {
                   <img src={speak1} className='w-[100px] h-10' />
                 </div>
               </div>
-              <div className='flex xs:items-center sm:items-start xs:pt-8 sm:pt-0 flex-col px-6'>
-                <img src={picture3} className='w-[200px] h-18' />
-                <h1>Istanbul, Turkey</h1>
-                <span>Hamidiye, Cendere Cd. No:103 <br  /> D:1B, 34398 Kâğıthane/ <br /> İstanbul/Türkiye</span>
+              <div className='flex xs:text-md xs:pb-4 sm:pb-0 sm:text-xl xs:items-center sm:items-start xs:pt-8 sm:pt-0 flex-col xs:px-40 sm:px-6'>
+                <img src={picture3} className='sm:w-[125px] pb-4 xs:w-[150px] h-18' />
+                <h1 className='font-bold xs:text-xl xs:py-2 sm:py-0'>Istanbul, Turkey</h1>
+                <span className='xs:py-2 sm:py-0'>Hamidiye, Cendere Cd. No:103 <br className='xs:hidden sm:flex' /> D:1B, 34398 Kâğıthane/ <br className='xs:hidden sm:flex' /> İstanbul/Türkiye</span>
                 <div className=' text-white gap-2 flex pt-2 rounded-l-[50px] rounded-r-none text-2xl px-2 pr-5'>
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faFacebook} />
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faInstagram} />
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faLinkedin} />
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faWhatsapp} />
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faYoutube} />
-                  <FontAwesomeIcon className=' bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faEnvelope} />
+                  <a href='https://www.facebook.com/Qualidentclinic' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faFacebook} />
+                  </a>
+                  <a href='https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA==' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faInstagram} />
+                  </a>
+                  <a href='https://www.linkedin.com/company/qualidentclinic/' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faLinkedin} />
+                  </a>
+                  <a href='https://api.whatsapp.com/send?phone=905308309219' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faWhatsapp} />
+                  </a>
+                  <a href='https://www.youtube.com/@qualidentagzvedissaglgpoli582' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faYoutube} />
+                  </a>
+                  <a href='mailto:info@qualident.com.tr' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                    <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faEnvelope} />
+                  </a>
                 </div>
               </div>
-              <div className=' xs:hidden sm:hidden bg-white rounded-[40px] py-4 px-8 items-center md:flex flex-col shadow-xl mt-4'>
+              <div className=' bg-[#DDAC68] bg-opacity-10 rounded-[40px] py-4 px-8 items-center md:flex flex-col shadow-xl mt-4'>
                 <h1 className='text-2xl font-bold text-main mb-4'>Get A Free Quote</h1>
                   <form className="flex flex-col" onSubmit={handleSubmit}>
                     <div className='w-full'>

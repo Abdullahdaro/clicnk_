@@ -93,14 +93,14 @@ const main = () => {
   </div>
   <div className='z-10 flex pt-4 pb-4 xl:max-w-[1280px] w-full flex-col'>
     <div className='flex xs:flex-col md:flex-row md:justify-between w-full z-10'>
-      <div className={` ${sm ? 'justify-end items-center flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4 sm:ml-20 xs:items-center`}>
-        <div className='z-10 sm:pl-20'>
+      <div className={` ${sm ? ' flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4 sm:ml-20 xs:items-start xs:ml-0`}>
+        <div className='z-10 sm:pl-20 xs:ml-16'>
           <img src={Picture3} className='w-[100px]' />
         </div>
         <div className=''>
-          <img src={Picture6} className={` ${sm ? 'w-[200px]' : 'w-[450px]'}  `} />
+          <img src={Picture6} className={` ${sm ? 'w-[300px]' : 'w-[450px]'}  `} />
         </div>
-        <div className='sm:ml-20 md:mb-16'> 
+        <div className='sm:ml-20 md:mb-16 xs:ml-10'> 
           <img src={Picture5} className='w-[300px]' />
         </div>
       </div>

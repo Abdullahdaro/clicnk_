@@ -1,5 +1,6 @@
 import React from 'react'
 import Picture10 from '../assets/Picture10.png'
+import ad2 from '../assets/ad2.png'
 import styles from '../styles'
 
 const advertisement = [
@@ -18,7 +19,7 @@ const advertisement = [
       eighthlink: ' Transportation with private car and translator, 2 ways from and to airport, from hotel to clinic and vice versa',
       ninethlink: ' 5-Star hotel accommodation 7 nights (8 Days) including breakfast with 1 companion',
       tenthlink: 'City tour with private car',
-      eleventhlink: 'Follow-up with doctor for 1 year after treatment',
+      eleventhlink: 'Follow-up with doctor for 2 year after treatment',
       twelvethlink: '15 years of warranty',
       discount: '30%',
   },
@@ -26,7 +27,7 @@ const advertisement = [
       id: 2,
       title: 'E-Max Laminate Veneers or Crowns',
       description: 'Package',
-      image: Picture10,
+      image: ad2,
       firstlink: 'E-Max Laminate veneers or crowns up to 24 teeth',
       secondlink: 'Panoramic x-ray',
       thirdlink: 'Digital smile design',
@@ -37,7 +38,7 @@ const advertisement = [
       eighthlink: ' Transportation with private car and translator, 2 ways from and to airport, from hotel to clinic and vice versa',
       ninethlink: ' 5-Star hotel accommodation 7 nights (8 Days) including breakfast with 1 companion',
       tenthlink: 'City tour with private car',
-      eleventhlink: 'Follow-up with doctor for 1 year after treatment',
+      eleventhlink: 'Follow-up with doctor for 2 ear After treatment',
       twelvethlink: '15 years of warranty',
       discount: '35%',
   },
@@ -65,7 +66,7 @@ const Advertisement = () => {
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.fifthlink}</li>
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.sixthlink}</li>
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.seventhlink}</li>
-                      <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.eighthlink}</li>
+                      <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px]  border-main'>{id1.eighthlink}</li>
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.ninethlink}</li>
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.tenthlink}</li>
                       <li className='border rounded-sm font-semibold p-1 xs:text-[14px] sm:text-[16px] border-main'>{id1.eleventhlink}</li>
