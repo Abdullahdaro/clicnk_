@@ -11,6 +11,7 @@ import Digitalsmile from "./component/Digitalsmile";
 import Doctors from "./component/Doctors";
 import Europe from "./component/Europe";
 import Advertisement from "./component/Advertisement";
+import Specialist from "./component/Specialist";
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
           <HowItWorks /> 
           <Doctors />
           <Digitalsmile />
+          <Specialist />
           <Europe />
           <Partner/>
         </div>

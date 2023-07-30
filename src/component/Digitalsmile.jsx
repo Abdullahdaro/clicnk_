@@ -33,10 +33,10 @@ const Digitalsmile = () => {
               </div>
             </div>  
           </div>
-          <div className='flex justify-between xs:px-10 sm:px-40 bg-[#DDAC68] bg-opacity-20'> 
-            <img src={smile3} className='h-1/4 w-1/4'/>
-            <img src={smile1} className='h-1/4 w-1/4'/>
-            <img src={smile2} alt="" className='h-1/4 w-1/4'/>
+          <div className='flex justify-between xs:px-10 sm:px-20 bg-[#DDAC68] bg-opacity-20'> 
+            <img src={smile3} className='h-1/5 w-1/5'/>
+            <img src={smile1} className='h-1/5 w-1/5'/>
+            <img src={smile2} alt="" className='h-1/5 w-1/5'/>
           </div>
         </div>
     </div>

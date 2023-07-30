@@ -32,7 +32,7 @@ const Constant = () => {
 
   return (
     <div className='flex relative xl:max-w-[1280px] justify-between items-center'>
-      <div className='fixed z-20 md:top-10 md:left-0 xs:top-0 xs:left-4'>
+      <div className='sm:fixed xs:absolute z-20 md:top-10 md:left-0 xs:top-0 xs:left-4'>
       <div className='bg-[#D8A768] xs:flex-col bg-opacity-40 xs:rounded-b-[50px] xs:rounded-t-none xs:gap-3 xs:px-0 xs:py-2 md:py-0 md:rounded-r-[50px] md:rounded-l-none text-xl font-semibold flex md:flex-row'>
       <button
         className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'Tr' ? 'active:bg-main' : ''}`}
@@ -54,7 +54,7 @@ const Constant = () => {
       </button>
     </div>
       </div>
-      <div className='fixed z-20 md:top-10 md:right-0 xs:top-0 xs:right-4'>
+      <div className='sm:fixed xs:absolute z-20 md:top-10 md:right-0 xs:top-0 xs:right-4'>
         <div>
           <div className='bg-main text-white xs:flex-col md:flex-row flex xs:rounded-b-[50px] xs:rounded-t-none md:rounded-l-[50px] md:rounded-r-none xs:text-md md:text-2xl px-2 md:py-1 xs:py-2 md:pr-5'>
             <a href='https://www.facebook.com/Qualidentclinic' target='_blank' rel='noopener noreferrer'>

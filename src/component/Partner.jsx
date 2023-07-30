@@ -22,6 +22,8 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css'
 
 
 const Partner = () => {
@@ -117,6 +119,13 @@ const Partner = () => {
     }
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      phone: value,
+    }));
+  };
+
   return (
     <div className={`${styles.paddingY} flex justify-center items-center flex-col`}>
         <div className='justify-center xl:max-w-[1400px] flex flex-col items-center'>       
@@ -187,8 +196,19 @@ const Partner = () => {
                       <h2 className='text-main mb-2 text-base font-semibold leading-[90.443%] tracking-tighter w-60 capitalize'>Full Name</h2>
                       <input className='w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main' type='text' value={formData.name} name='name' onChange={handleChange} required placeholder='Enter Your Full Name' />
                       <div className='bordermt-2 mb-4 xs:mb-6 '></div>
-                      <h2 className='text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize'>Phone Number</h2>
-                      <input className='w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main' type='text' value={formData.phone} name='phone' onChange={handleChange}  required placeholder='Phone Number' />
+                      <div className="flex flex-col mb-4">
+                        <label htmlFor="phone" className="text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize">
+                          Phone Number
+                        </label>
+                        <PhoneInput
+                          international
+                          defaultCountry="US"
+                          value={formData.phone}
+                          onChange={handlePhoneChange}
+                          className="w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
                       <div className='border mt-2 mb-4 xs:mb-6'></div>
                       <h2 className='text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize '>Email</h2>
                       <input
