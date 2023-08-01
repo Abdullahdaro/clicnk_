@@ -19,8 +19,8 @@ const advertisement = [
       eighthlink: ' Transportation with private car and translator, 2 ways from and to airport, from hotel to clinic and vice versa',
       ninethlink: ' 5-Star hotel accommodation 7 nights (8 Days) including breakfast with 1 companion',
       tenthlink: 'City tour with private car',
-      eleventhlink: 'Follow-up with doctor for 2 year after treatment',
-      twelvethlink: '15 years of warranty',
+      eleventhlink: 'Follow-up with doctor for 2 years after treatment',
+      twelvethlink: '5 years of warranty',
       discount: '30%',
   },
   {
@@ -38,8 +38,8 @@ const advertisement = [
       eighthlink: ' Transportation with private car and translator, 2 ways from and to airport, from hotel to clinic and vice versa',
       ninethlink: ' 5-Star hotel accommodation 7 nights (8 Days) including breakfast with 1 companion',
       tenthlink: 'City tour with private car',
-      eleventhlink: 'Follow-up with doctor for 2 ear After treatment',
-      twelvethlink: '15 years of warranty',
+      eleventhlink: 'Follow-up with doctor for 2 years After treatment',
+      twelvethlink: '5 years of warranty',
       discount: '35%',
   },
 ]

@@ -100,9 +100,9 @@ const main = () => {
   </div>
   <div className='z-10 flex pt-4 pb-4 xl:max-w-[1280px] w-full flex-col'>
     <div className='flex xs:flex-col md:flex-row md:justify-between w-full z-10'>
-      <div className={` ${sm ? ' flex flex-col pt-36 py-20' : 'justify-start items-start' } pr-4 sm:ml-20 xs:items-start xs:ml-0`}>
+      <div className={` ${sm ? ' flex flex-col pt-20 py-20' : 'justify-start items-start' } pr-4 sm:ml-20 xs:items-start xs:ml-0`}>
         <div className='z-10 sm:pl-20 xs:ml-16'>
-          <img src={Picture3} className='w-[100px]' />
+          <img src={Picture3} className='xs:w-[100px] sm:w-[150px]' />
         </div>
         <div className=''>
           <img src={Picture6} className={` ${sm ? 'w-[300px]' : 'w-[450px]'}  `} />

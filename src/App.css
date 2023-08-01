@@ -104,3 +104,22 @@
 .icon:hover {
   transform: scale(1.2); /* Scale the icon by 1.2 (20% bigger) on hover */
 }
+
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

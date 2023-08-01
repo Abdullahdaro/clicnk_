@@ -165,7 +165,7 @@ const Doctors = () => {
       </div>
       <div className='bg-[#DDAC681F] w-full items-center flex justify-center p-10'>
       <a
-        href='https://api.whatsapp.com/send?phone=905308309219' className='xs:hidden md:flex'>
+        href='https://api.whatsapp.com/send?phone=905308309219' className='xs:hidden md:flex hover:scale-125'>
                 <svg width="225" height="100" viewBox="0 0 344 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_1_311)">
                 <rect x="4" width="336" height="92" rx="15" fill="url(#paint0_linear_1_311)"/>

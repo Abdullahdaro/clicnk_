@@ -26,8 +26,8 @@ const HowItWorks = () => {
 
     
   return (
-    <div className='justify-center xs:hidden sm:flex'>
-        <div className={`bg-bg1 xl:max-w-[1280px] w-full pt-10 pb-6`}>
+    <div className='justify-center bg-bg1 xs:hidden sm:flex'>
+        <div className={` xl:max-w-[1280px] w-full pt-10 pb-6`}>
             <div class="text-main items-center flex justify-center lg:text-[55px] leading-normal pb-10">
                 <h1 className='bg-[#DDAC68] px-20 rounded-[40px] font-semibold bg-opacity-10'>How it works</h1>
             </div>
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                     <path d="M-124 287.231C-106.915 280.731 85.5482 70.231 350.876 106.231C616.203 142.231 620.223 334.231 898.616 270.231C1177.01 206.231 1465.95 -82.769 1699.12 29.731C1885.65 119.731 1960.76 166.564 1975 178.731" stroke="#DDAC68" stroke-width="4" />
                 </svg>
             </div>
-            <div className='flex justify-between pl-40'>
+            <div className='flex justify-between pl-40 pt-10'>
                 <div>
                     <div className='flex relative'>
                         <span className='px-4 text-[35px] font-bold text-[#DDAC68] bg-[#DDAC68] bg-opacity-20 rounded-xl'>2</span>

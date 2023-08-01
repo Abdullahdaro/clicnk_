@@ -138,3 +138,35 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+.motion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motion-box {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  transition: transform 12s ease;
+}
+
+.rotate {
+  animation: rotateAnimation 4.0s ease;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

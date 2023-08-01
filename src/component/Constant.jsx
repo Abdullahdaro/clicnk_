@@ -9,7 +9,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import whatsapp from '../assets/whatsapp.png'
-
+import { CSSTransition } from 'react-transition-group';
+import 'animate.css/animate.min.css';
+import '../index.css';
 
 const Constant = () => {
   const [activeLang, setActiveLang] = useState('En');
@@ -21,11 +23,15 @@ const Constant = () => {
 
   const [showGetQuote, setShowGetQuote] = useState(false);
 
+  const handleButtonClick = () => {
+    setShowGetQuote((prev) => !prev);
+  };
+
   useEffect(() => {
     // Function to toggle the Get Quote button every 2 seconds
     const interval = setInterval(() => {
       setShowGetQuote((prev) => !prev);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(interval); // Clear the interval on component unmount
   }, []);
@@ -83,27 +89,23 @@ const Constant = () => {
           <img src={whatsapp} className='w-[60px] h-[60px] md:mr-10 xs:mr-4 hover:scale-125' alt='WhatsApp' />
         </a>
       </div>
-      <div className='fixed z-20 xs:bottom-0 w-full sm:hidden'>
+      <div className='fixed z-20 flex xs:bottom-0 w-full sm:hidden'>
       {/* Changing Button */}
-      {showGetQuote ? (
-        <button className='w-1/2 bg-main inline-flex items-center justify-center py-4 text-white font-bold text-lg'>
-          <h1 className='mr-2'>Free</h1>
-        </button>
-      ) : (
-        <a
-        href='https://forms.crm.hopmd.com/crm_form_vprxw/' 
-        className='w-1/2 bg-main inline-flex items-center justify-center py-4 text-white font-bold text-lg'>
-          <h1 className='mr-2'>Get a Free Quote</h1>
-        </a>
-      )}
-
+          <div className="motion-container">
+          <div
+            className={`motion-box ${showGetQuote ? '' : 'rotate'}`}
+            onClick={handleButtonClick}
+          >
+            {showGetQuote ? <h1 className='bg-[#e7a957] w-full inline-flex items-center justify-center rotate py-4 text-white font-bold text-lg'>Free</h1> : <h1 className='bg-[#efd5b3] w-full inline-flex items-center justify-center py-4 text-black font-bold text-lg'>Get a Free Quote</h1>}
+          </div>
+        </div>
             {/* WhatsApp Button */}
             <a
         href='https://api.whatsapp.com/send?phone=905308309219'
         target='_blank'
         className='bg-[#74F58C] w-1/2 inline-flex items-center justify-center text-white py-4 font-bold text-lg'
       >
-        {<FontAwesomeIcon icon={faWhatsapp} className='text-[15px] mr-4 scale-150' />}
+        {<FontAwesomeIcon icon={faWhatsapp} className='text-[14px] mr-4 scale-150' />}
         WhatsApp
       </a>
       </div>
