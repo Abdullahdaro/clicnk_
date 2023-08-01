@@ -23,9 +23,10 @@ const reviews = [
         way: 'Zirconia Crowns',
         review: '‘‘The process was easier, quicker and better than I expected‘‘',   
         image: maingirl,
-        video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+        video: 'https://www.youtube.com/embed/jp5Aa39msxs',
         flag: uk,
-        country: 'United Kingdom'
+        country: 'United Kingdom',
+        hastag: '#Happiness '
     },
     { 
       name: 'Pernaz S.',
@@ -33,9 +34,10 @@ const reviews = [
       way: 'E-Max Laminate Veneers',
       review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
       image: irangirl,
-      video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+      video: 'https://www.youtube.com/embed/ItD6nMZRbCU',
       flag: iran,
-      country: 'IRAN'
+      country: 'IRAN',
+      hastag: '#Celebrity'
     },
     {
       name: 'Haifa M.     ',
@@ -43,9 +45,10 @@ const reviews = [
       way: 'E-Max Zirconia Crowns',
       review: '‘‘They kept in touch with me throughout the whole time to be sure I was fine after all the procedures’’      ',
       image: girlwithsmile,
-      video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+      video: 'https://www.youtube.com/embed/kk3xdM4EMZg',
       flag: usa,
-      country: 'USA'
+      country: 'USA',
+      hastag: '#Satisfaction'
   },
   {
     name: 'Erkan C.',
@@ -53,9 +56,10 @@ const reviews = [
     way: '',
     review: '‘‘‘I was unhappy with my appearance, I had forgotten to laugh. Now I realize that I can laugh, lucky me.’’’',
     image: turkey,
-    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+    video: 'https://www.youtube.com/embed/4yiGZyX21h4',
     flag: turkeyflag,
-    country: 'TURKEY'
+    country: 'TURKEY',
+    hastag: '#Self Confidence'
   },
   {   
     name: 'Abdulaziz T.',
@@ -65,7 +69,8 @@ const reviews = [
     image: oldman,
     video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
     flag: algeria,
-    country: 'ALGERiA'
+    country: 'ALGERiA',
+    hastag: '#Comfort'
   },
   {
     name: 'Latoya W.',
@@ -75,7 +80,8 @@ const reviews = [
     image: blackwoman,
     video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
     flag: iran,
-    country: 'IRAN'
+    country: 'IRAN',
+    hastag: '#HappyTears'
   }
 ]
 
@@ -83,6 +89,22 @@ const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sm, setSm] = useState(window.innerWidth <= 1200);
   const [xs, setXS] = useState(window.innerWidth <= 640);
+  const [showVideo, setShowVideo] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+
+  const handleVideoButtonClick = () => {
+    setShowVideo(true);
+    setVideoPlaying(true);
+  };
+
+  const handleVideoClose = () => {
+    setShowVideo(false);
+    setVideoPlaying(false);
+  };
+
+  const handleVideoClosed = () => {
+    setVideoPlaying(false);
+  };
 
   useEffect(() => {
     function handleResize() {
@@ -124,14 +146,20 @@ const Reviews = () => {
 
   useEffect(() => {
     // Automatically move to the next picture every 3 seconds
-    const timer = setInterval(() => {
-      handleNext();
-    }, 3000);
+    let timer;
+
+    if (!videoPlaying) {
+      // Automatically move to the next picture every 3 seconds if videoPlaying is false
+      timer = setInterval(() => {
+        handleNext();
+      }, 3000);
+    }
 
     return () => {
       clearInterval(timer); // Clean up the interval on component unmount
     };
-  }, [currentIndex]);
+  }, [currentIndex, videoPlaying]);
+
   const review = reviews[currentIndex];
   const nextIndex = (currentIndex + 1) % reviews.length;
   const nextReview = reviews[nextIndex];
@@ -139,8 +167,9 @@ const Reviews = () => {
   return (
     <div className={`flex bg-[#DDAC681A] flex-col items-center justify-center}`}>
       <div className={`${sm ? 'flex-col-reverse' : 'flex'}`}>
-        <div className={` ${sm ? ' justify-center items-center ml-10 flex-col flex' : 'justify-start ml-16 items-start flex flex-col'} pt-40`}>
-          <h1 className={` font-bold text-[#DDAC68] leading-tight ${xs ? 'text-[30px] w-1/2 ml-6' : 'text-[50px]  w-[500px]'}`}>{review.treatment}</h1>
+        <div className={` ${sm ? ' justify-center items-center ml-6 flex-col flex' : 'justify-start ml-16 items-start flex flex-col'} xs:pt-20 sm:pt-40`}>
+          <span className='font-semibold xs:hidden sm:flex'>{review.hastag}</span>
+          <h1 className={` font-bold text-[#DDAC68] leading-tight ${xs ? 'text-[30px] w-1/2 ml-14' : 'text-[50px]  w-[500px]'}`}>{review.treatment}</h1>
           <span className='text-[#3C3C3B] text-[18px] leading-tight font-semibold'>{review.way}</span>
           <div className={`pt-14 ${sm ? 'flex flex-col items-center' : ''}`}>
               <p className={` text-[#3C3C3B] text-[22px] leading-tight font-semibold ${xs ? 'text-[16px] text-center pr-[190px] px-40 items-center flex' : 'w-[380px]'}`}>{review.review}</p>
@@ -164,9 +193,30 @@ const Reviews = () => {
             </button>
             <div className={`relative ${xs ? 'w-1/3' : ''}`}>
               <img src={review.image} alt={review.name} className="w-[500px] z-10 button-0" />
-              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] opacity-90 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded">
-                <FontAwesomeIcon icon={faCirclePlay} />
-              </button>
+              {!showVideo && (
+                <button onClick={handleVideoButtonClick} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[60px] opacity-90 hover:bg-gray-600 text-white font-bold px-4 py-2 rounded">
+                  <FontAwesomeIcon icon={faCirclePlay} />
+                </button>
+              )}
+              {showVideo && (
+                <div className="absolute top-0 left-0 w-full h-full z-20">
+                  <iframe
+                    width="500"
+                    height="315"
+                    className='xs:w-[300px] xs:h-[200px]'
+                    src={review.video}
+                    title="YouTube Video Player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    onPause={handleVideoClosed}
+                    onEnded={handleVideoClosed}
+                  ></iframe>
+                  <button onClick={handleVideoClose} className="absolute top-2 right-2 text-white font-bold px-4 py-2 rounded bg-red-600">
+                    Close
+                  </button>
+                </div>
+              )}
             </div>
             <button
               className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute z-10 top-1/2 transform -translate-y-1/2 right-2 ${xs ? 'relative' : ''}`}
