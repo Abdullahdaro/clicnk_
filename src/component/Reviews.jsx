@@ -13,79 +13,11 @@ import turkey from '../assets/turkey.png'
 import turkeyflag from '../assets/turkeyflag.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
-
-
-
-const reviews = [
-    {
-        name: 'Elif S...',
-        treatment: 'Q Hollywood Smile',
-        way: 'Zirconia Crowns',
-        review: '‘‘The process was easier, quicker and better than I expected‘‘',   
-        image: maingirl,
-        video: 'https://www.youtube.com/embed/jp5Aa39msxs',
-        flag: uk,
-        country: 'United Kingdom',
-        hastag: '#Happiness '
-    },
-    { 
-      name: 'Pernaz S.',
-      treatment: 'Q Hollywood Smile',
-      way: 'E-Max Laminate Veneers',
-      review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
-      image: irangirl,
-      video: 'https://www.youtube.com/embed/ItD6nMZRbCU',
-      flag: iran,
-      country: 'IRAN',
-      hastag: '#Celebrity'
-    },
-    {
-      name: 'Haifa M.     ',
-      treatment: 'Q Hollywood Smile',
-      way: 'E-Max Zirconia Crowns',
-      review: '‘‘They kept in touch with me throughout the whole time to be sure I was fine after all the procedures’’      ',
-      image: girlwithsmile,
-      video: 'https://www.youtube.com/embed/kk3xdM4EMZg',
-      flag: usa,
-      country: 'USA',
-      hastag: '#Satisfaction'
-  },
-  {
-    name: 'Erkan C.',
-    treatment: 'All-On-4/6 Dental Implant',
-    way: '',
-    review: '‘‘‘I was unhappy with my appearance, I had forgotten to laugh. Now I realize that I can laugh, lucky me.’’’',
-    image: turkey,
-    video: 'https://www.youtube.com/embed/4yiGZyX21h4',
-    flag: turkeyflag,
-    country: 'TURKEY',
-    hastag: '#Self Confidence'
-  },
-  {   
-    name: 'Abdulaziz T.',
-    treatment: 'All-On-4/6 Dental Implant',
-    way: '',
-    review: '‘‘Special Thanks for warm welcome and the full support that was reserved for me.’’',
-    image: oldman,
-    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-    flag: algeria,
-    country: 'ALGERiA',
-    hastag: '#Comfort'
-  },
-  {
-    name: 'Latoya W.',
-    treatment: 'ALL-ON-4/6 Dental Implant',
-    way: '',
-    review: '‘‘I received a quality smile, you have changed my life’’',
-    image: blackwoman,
-    video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-    flag: iran,
-    country: 'IRAN',
-    hastag: '#HappyTears'
-  }
-]
+import { useLanguage } from '../constant/LanguageContext'
+import reviews from './content/reviewsContent'
 
 const Reviews = () => {
+  const { activeLang } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [sm, setSm] = useState(window.innerWidth <= 1200);
   const [xs, setXS] = useState(window.innerWidth <= 640);
@@ -137,7 +69,7 @@ const Reviews = () => {
   };
 
   const handleNext = () => {
-    if (currentIndex < reviews.length - 1) {
+    if (currentIndex < reviews[activeLang].length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0); // Reset to the first picture if at the end
@@ -160,9 +92,9 @@ const Reviews = () => {
     };
   }, [currentIndex, videoPlaying]);
 
-  const review = reviews[currentIndex];
-  const nextIndex = (currentIndex + 1) % reviews.length;
-  const nextReview = reviews[nextIndex];
+  const review = reviews[activeLang][currentIndex];
+  const nextIndex = (currentIndex + 1) % reviews[activeLang].length;
+  const nextReview = reviews[activeLang][nextIndex];
 
   return (
     <div className={`flex bg-[#DDAC681A] flex-col items-center justify-center}`}>

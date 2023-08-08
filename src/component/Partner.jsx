@@ -24,9 +24,13 @@ import {
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
+import { useLanguage } from '../constant/LanguageContext'
+import partnerContent from './content/partnerContent'
 
 
 const Partner = () => {
+  const { activeLang } = useLanguage();
+  const parter = partnerContent[activeLang];
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -129,12 +133,12 @@ const Partner = () => {
   return (
     <div className={`${styles.paddingY} flex justify-center items-center flex-col`}>
         <div className='justify-center xl:max-w-[1400px] flex flex-col items-center'>       
-            <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR PARTNERS IN USA</h1>
+            <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>{parter.title}</h1>
             <div className='flex p-10 md:gap-20 xs:gap-4'>
                 <img src={partner} className='sm:w-auto sm:h-16 xs:w-[100px]' />
                 <img src={partner2} className='sm:w-[350px]  xs:w-[200px]' />
             </div>
-            <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>OUR SOLUTION PARTNERS</h1>
+            <h1 className='md:text-[40px] sm:text-2xl font-bold text-main'>{parter.first}</h1>
             <div className='slider-container pt-6 overflow-hidden'>
               <div className='slider flex pt-5' ref={sliderRef}>
                 <img src={logo1} className='w-[400px] h-14 px-20' />
@@ -145,16 +149,16 @@ const Partner = () => {
                 <img src={logo6} className='w-[400px] h-14 px-20' />
               </div>
             </div>
-            <div className='xs:flex-col-reverse md:flex-row flex justify-between xs:pt-10 md:pt-10 md:px-10 xs:px-40 items-center'>
+            <div className='xs:flex-col-reverse md:flex-row flex justify-between xs:pt-10 md:pt-10 md:px-10 xs:px-40 items-center xs:pb-10 sm:pb-0'>
               <div className='w-1/2 justify-between flex flex-col gap-7'>
-                <div className='md:flex-row flex xs:flex-col'>
-                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start pr-4'>
-                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>Best Patient Experience</h1>
-                    <span className='xs:text-sm sm:text-md font-semibold '>We pride ourselves on the best <br className='xs:hidden sm:flex' /> quality customer services in <br className='xs:hidden sm:flex' /> Turkey and Europe backed by <br className='xs:hidden sm:flex' /> decades of clinical experience. <br className='xs:hidden sm:flex' /> Our belief is that healthy mouths <br className='xs:hidden sm:flex' /> always lead to healthy bodies.</span>
+                <div className='md:flex-row flex grid-col-2 xs:flex-col'>
+                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start pr-4 '>
+                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>{parter.second}</h1>
+                    <span className='xs:text-sm sm:text-md font-semibold '>{parter.line1} <br className='xs:hidden sm:flex' /> {parter.line2} <br className='xs:hidden sm:flex' /> {parter.line3}<br className='xs:hidden sm:flex' /> {parter.line4} <br className='xs:hidden sm:flex' /> {parter.line5} <br className='xs:hidden sm:flex' /> {parter.line6}</span>
                   </div>
-                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start px-4'>
-                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>We Speak Multiple Languages</h1>
-                    <span className='xs:text-sm sm:text-md font-semibold '>Our doctors and medical team speak <br className='xs:hidden sm:flex' /> multiple languages where they can <br className='xs:hidden sm:flex' /> communicate directly with our <br className='xs:hidden sm:flex' /> patients to make sure all their <br className='xs:hidden sm:flex' /> dental needs are met.</span>
+                  <div className='xs:text-center xs:py-4 sm:py-0 sm:text-start px-4 '>
+                    <h1 className='md:text-xl xs:text-xl font-bold text-[#DDAC68]'>{parter.third}</h1>
+                    <span className='xs:text-sm sm:text-md font-semibold '>{parter.l1}<br className='xs:hidden sm:flex' /> {parter.l2} <br className='xs:hidden sm:flex' /> {parter.l3} <br className='xs:hidden sm:flex' /> {parter.l4}<br className='xs:hidden sm:flex' /> {parter.l5}</span>
                   </div>
                 </div>
                 <div className='sm:flex xs:grid xs:grid-cols-2 sm:flex-row gap-8'>
@@ -190,15 +194,15 @@ const Partner = () => {
                 </div>
               </div>
               <div className=' bg-[#DDAC68] bg-opacity-10 rounded-[40px] py-4 px-8 items-center md:flex flex-col shadow-xl mt-4'>
-                <h1 className='text-2xl font-bold text-main mb-4'>Get A Free Quote</h1>
+                <h1 className='text-2xl font-bold text-main mb-4'>{parter.formtitle}</h1>
                   <form className="flex flex-col" onSubmit={handleSubmit}>
                     <div className='w-full'>
-                      <h2 className='text-main mb-2 text-base font-semibold leading-[90.443%] tracking-tighter w-60 capitalize'>Full Name</h2>
-                      <input className='w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main' type='text' value={formData.name} name='name' onChange={handleChange} required placeholder='Enter Your Full Name' />
+                      <h2 className='text-main mb-2 text-base font-semibold leading-[90.443%] tracking-tighter w-60 capitalize'>{parter.formname}</h2>
+                      <input className='w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main' type='text' value={formData.name} name='name' onChange={handleChange} required placeholder={parter.fillname} />
                       <div className='bordermt-2 mb-4 xs:mb-6 '></div>
                       <div className="flex flex-col mb-4">
                         <label htmlFor="phone" className="text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize">
-                          Phone Number
+                        {parter.formphone}
                         </label>
                         <PhoneInput
                           international
@@ -210,7 +214,7 @@ const Partner = () => {
                         />
                       </div>
                       <div className='border mt-2 mb-4 xs:mb-6'></div>
-                      <h2 className='text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize '>Email</h2>
+                      <h2 className='text-main pb-2 font-semibold leading-[90.443%] tracking-tighter capitalize '>{parter.formemail}</h2>
                       <input
                           className='w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main'
                           type='email'
@@ -218,12 +222,12 @@ const Partner = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder='Enter your email address'
+                          placeholder={partner.fillemail}
                         />
                       <div className='border my-2'></div>
                     </div>
                     <div className='flex pl-4 xs:pl-11 items-center'>
-                      <button type="submit" className='items-center bg-main rounded-[40px] px-8 py-2 text-white font-bold'>Submit Now</button>
+                      <button type="submit" className='items-center bg-main rounded-[40px] px-8 py-2 text-white font-bold'>{parter.submit}</button>
                     </div>
                   </form>
               </div>

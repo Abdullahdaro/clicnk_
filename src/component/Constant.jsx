@@ -12,14 +12,10 @@ import whatsapp from '../assets/whatsapp.png'
 import { CSSTransition } from 'react-transition-group';
 import 'animate.css/animate.min.css';
 import '../index.css';
+import { useLanguage } from '../constant/LanguageContext';
 
 const Constant = () => {
-  const [activeLang, setActiveLang] = useState('En');
-
-  const handleLangClick = (lang) => {
-    setActiveLang((prevLang) => (prevLang === lang ? 'En' : lang));
-    // Additional code for language selection logic, if needed
-  };
+  const { activeLang, handleLangClick } = useLanguage();
 
   const [showGetQuote, setShowGetQuote] = useState(false);
 
@@ -39,26 +35,26 @@ const Constant = () => {
   return (
     <div className='flex relative xl:max-w-[1280px] justify-between items-center'>
       <div className='sm:fixed xs:absolute z-20 md:top-10 md:left-0 xs:top-0 xs:left-4'>
-      <div className='bg-[#D8A768] xs:flex-col bg-opacity-40 xs:rounded-b-[50px] xs:rounded-t-none xs:gap-3 xs:px-0 xs:py-2 md:py-0 md:rounded-r-[50px] md:rounded-l-none text-xl font-semibold flex md:flex-row'>
-      <button
-        className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'Tr' ? 'active:bg-main' : ''}`}
-        onClick={() => handleLangClick('Tr')}
-      >
-        Tr
-      </button>
-      <button
-        className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'Ar' ? 'active:bg-main' : ''}`}
-        onClick={() => handleLangClick('Ar')}
-      >
-        Ar
-      </button>
-      <button
-        className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'En' ? 'active:bg-main' : ''}`}
-        onClick={() => handleLangClick('En')}
-      >
-        En
-      </button>
-    </div>
+       <div className='bg-[#D8A768] xs:flex-col bg-opacity-40 xs:rounded-b-[50px] xs:rounded-t-none xs:gap-3 xs:px-0 xs:py-2 md:py-0 md:rounded-r-[50px] md:rounded-l-none text-xl font-semibold flex md:flex-row'>
+        <button
+          className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'tr' ? 'bg-main shadow-lg' : ''}`}
+          onClick={() => handleLangClick('tr')}
+        >
+          {activeLang === 'tr' ? 'TR' : 'TR'}
+        </button>
+        <button
+          className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'fr' ? 'bg-main shadow-lg' : ''}`}
+          onClick={() => handleLangClick('fr')}
+        >
+          FR
+        </button>
+        <button
+          className={`md:px-4 xs:px-2 md:py-1 ${activeLang === 'en' ? 'bg-main xs:rounded-b-[50px] md:rounded-bl-none md:rounded-r-[50px] shadow-lg' : ''}`}
+          onClick={() => handleLangClick('en')}
+        >
+          EN
+        </button>
+       </div>
       </div>
       <div className='sm:fixed xs:absolute z-20 md:top-10 md:right-0 xs:top-0 xs:right-4'>
         <div>
@@ -91,15 +87,15 @@ const Constant = () => {
       </div>
       <div className='fixed z-20 flex xs:bottom-0 w-full sm:hidden'>
       {/* Changing Button */}
-          <div className="motion-container">
+        <div className="motion-container">
           <div
-            className={`motion-box ${showGetQuote ? '' : 'rotate'}`}
+            className={`motion-box  ${showGetQuote ? '' : 'rotate'}`}
             onClick={handleButtonClick}
           >
             {showGetQuote ? <h1 className='bg-[#e7a957] w-full inline-flex items-center justify-center rotate py-4 text-white font-bold text-lg'>Free</h1> : <h1 className='bg-[#efd5b3] w-full inline-flex items-center justify-center py-4 text-black font-bold text-lg'>Get a Free Quote</h1>}
           </div>
         </div>
-            {/* WhatsApp Button */}
+      {/* WhatsApp Button */}
             <a
         href='https://api.whatsapp.com/send?phone=905308309219'
         target='_blank'
