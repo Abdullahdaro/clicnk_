@@ -33,11 +33,11 @@ const partnerContent = {
         line1: "Türkiye ve Avrupa'da onlarca ",
         line2: 'yıllık klinik deneyimine dayanarak',
         line3: 'en iyi hasta hizmetleri sunmaktan',
-        line4: 'gurur duymaktayız.Inanıyoruz ki sağlıklı',
+        line4: 'gurur duymaktayız. Inanıyoruz ki sağlıklı',
         line5: 'ağız her zaman sağlıklı vücuda yol açmaktadır.',
         l1: 'Hastalarımıza en kaliteli hizmet ve tedavi ',
         l2: ' sunabilmek ve tüm diş ihtiyaçlarının ',
-        l3: ' karşılandığından emin olmak içinbirden ',
+        l3: ' karşılandığından emin olmak için birden ',
         l4: ' fazla dil konuşan doktorlarımız ve medikal  ',
         l5: 'ekibimiz tüm tedavi süresince yanınızda olacaktır.',
 
@@ -65,7 +65,7 @@ const partnerContent = {
         l1: 'Nos médecins et notre équipe médicale parlent plusieurs',
         l2: 'langues et peuvent ainsi communiquer',
         l3: 'directement avec nos avec nos patients pour',
-        l4: 's assurer que tous leurs besoins',
+        l4: "s'assurer que tous leurs besoins",
         l5: 'dentaires sont satisfaits.',
 
         formtitle: 'Obtenez un devis gratuit',

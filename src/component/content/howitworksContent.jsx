@@ -12,7 +12,7 @@ const howitworksContent = {
     tr: {
         title: 'İşler Nasıl Yürüyor?',
         first: 'Bir istek gönderin',
-        second:'Qualident tıbbi danışmanı sizinle iletişime geçecektir',
+        second:'Qualident medikal danışman sizinle iletişime geçecektir',
         third: '24 saat içinde tedavi planı alın',
         fouth: 'Seyahatinizi düzenleyelim',
         fifth: 'Tedavi olup geri dönmek',

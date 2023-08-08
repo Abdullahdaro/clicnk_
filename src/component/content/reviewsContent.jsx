@@ -89,7 +89,7 @@ const reviews = {
             image: maingirl,
             video: 'https://www.youtube.com/embed/jp5Aa39msxs',
             flag: uk,
-            country: 'Birleşik Krallık',
+            country: '	BİRLEŞİK KRALLIK',
             hastag: '#Mutluluk'
         },
         {

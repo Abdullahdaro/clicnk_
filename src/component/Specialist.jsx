@@ -76,7 +76,7 @@ const Specialist = () => {
                     <h1 className='text-[#3C3C3B] xs:pt-2 md:pt-4 xs:text-[8px] md:text-[22px] font-semibold'>{specialistContent.sixth} </h1>
                 </div>
             </div>
-            <div className='md:pl-10 flex flex-col items-center justify-start'>
+            <div className='md:pl-10 flex flex-col items-center justify-start xs:pl-2 sm:pl-0'>
                 <div className='flex relative pt-4 text-center'>
                     <span className='text-[#3C3C3B] sm:text-md font-semibold  bg-opacity-10 rounded-xl'><img src={iconsiezer} className='  md:w-[85px] xs:w-[50px]' /></span>
                 </div>

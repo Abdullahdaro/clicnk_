@@ -95,7 +95,7 @@ const main = () => {
     <div>
       <img src={con.second} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `}/>
     </div>
-    <div className='absolute top-20'>
+    <div className='xs:absolute xs:top-20 sm:relative sm:top-0'>
       <img src={con.first} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `} />
     </div>
   </div>
@@ -109,7 +109,7 @@ const main = () => {
           <img src={Picture6} className={` ${sm ? 'w-[300px]' : 'w-[450px]'}  `} />
         </div>
         <div className='sm:ml-20 md:mb-16 xs:ml-10'> 
-          <img src={con.third} className={`${activeLang === 'tr' ? 'w-[500px]' : 'w-[300px]'} ${activeLang === 'fr' ? 'w-[500px]' : 'w-[300px]'}`} />
+          <img src={con.third} className={`${activeLang === 'tr' ? 'w-[550px]' : 'w-[300px]'} ${activeLang === 'fr' ? 'w-[500px]' : 'w-[300px]'}`} />
         </div>
       </div>
       <div className='xs:hidden sm:hidden mb-20 bg-white rounded-[40px] py-4 px-8 items-center sm:mr-20 md:flex flex-col shadow-xl mt-4'>
