@@ -26,11 +26,11 @@ const content = {
     tr: {
         formtitle: 'Ücretsiz Fiyat Teklifi Alın',
         formname: 'Ad Soyad',
-        fillname: 'Lütfen adınızı giriniz',
+        fillname: 'Ad ve Soyadınızı Girin',
         formemail: 'Email',
         fillmail: 'Lütfen email adresinizi giriniz',
         formphone: 'Telefon Numarası',
-        submit : 'Şimdi Gönder',
+        submit : 'Gönder',
         first: Picture1tr,
         second: Picture2tr,
         third: Picture5tr,

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import background from '../assets/background.png'
 import main1 from '../assets/main1.png'
+import maingirl from '../assets/maingirl.png'
 import Picture3 from '../assets/Picture3.png'
 import Picture6 from '../assets/Picture6.png'
 import PhoneInput from 'react-phone-number-input';
@@ -90,7 +91,7 @@ const main = () => {
   return (
 <div className={`flex flex-col w-full items-center relative `}>
   <img loading='lazy' className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
-  <img loading='lazy' className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-90 blur-sm' : 'opacity-100'}`} src={main1} alt="Main1" />
+  <img loading='lazy' className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-90 blur-sm' : 'blure-50'}`} src={maingirl} alt="Main1" />
   <div className={`z-10 flex md:pb-4 relative items-start justify-center ${sm ? 'pt-0' : 'pt-0' } xs:flex-col sm:flex-row`}>
     <div>
       <img loading='lazy' src={con.second} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `}/>
@@ -141,7 +142,7 @@ const main = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder={con.fillemail}
+                          placeholder={con.fillmail}
                         />
               <div className='border mt-2'></div>
             </div>

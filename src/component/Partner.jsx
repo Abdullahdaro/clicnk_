@@ -222,7 +222,7 @@ const Partner = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder={partner.fillemail}
+                          placeholder={parter.fillemail}
                         />
                       <div className='border my-2'></div>
                     </div>
