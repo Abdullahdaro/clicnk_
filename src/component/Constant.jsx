@@ -92,7 +92,7 @@ const Constant = () => {
             className={`motion-box  ${showGetQuote ? '' : 'rotate'}`}
             onClick={handleButtonClick}
           >
-            {showGetQuote ? <h1 className='bg-[#e7a957] w-full inline-flex items-center justify-center rotate py-4 text-white font-bold text-lg'>Free</h1> : <h1 className='bg-[#efd5b3] w-full inline-flex items-center justify-center py-4 text-black font-bold text-lg'>Get a Free Quote</h1>}
+            {showGetQuote ? <h1 className='bg-[#e7a957] w-full inline-flex items-center justify-center rotate py-4 text-white font-bold text-lg'>{activeLang === 'tr' ? 'Bedava' : activeLang === 'en' ? 'Free' : activeLang === 'fr' ? 'Gratuite' : ''}</h1> : <h1 className='bg-[#efd5b3] w-full inline-flex items-center justify-center py-4 text-black font-bold text-lg'>{activeLang === 'tr' ? 'Fiyat Teklifi Alın' : activeLang === 'en' ? 'Get a Free Quote' : activeLang === 'fr' ? 'Obtenir un Devis' : ''}</h1>}
           </div>
         </div>
       {/* WhatsApp Button */}

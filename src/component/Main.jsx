@@ -89,27 +89,27 @@ const main = () => {
   
   return (
 <div className={`flex flex-col w-full items-center relative `}>
-  <img className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
-  <img className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-90 blur-sm' : 'opacity-100'}`} src={main1} alt="Main1" />
+  <img loading='lazy' className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
+  <img loading='lazy' className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-90 blur-sm' : 'opacity-100'}`} src={main1} alt="Main1" />
   <div className={`z-10 flex md:pb-4 relative items-start justify-center ${sm ? 'pt-0' : 'pt-0' } xs:flex-col sm:flex-row`}>
     <div>
-      <img src={con.second} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `}/>
+      <img loading='lazy' src={con.second} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `}/>
     </div>
     <div className='xs:absolute xs:top-20 sm:relative sm:top-0'>
-      <img src={con.first} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `} />
+      <img loading='lazy' src={con.first} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `} />
     </div>
   </div>
   <div className='z-10 flex md:pt-4 pb-4 xl:max-w-[1280px] w-full flex-col'>
     <div className='flex xs:flex-col md:flex-row md:justify-between w-full z-10'>
       <div className={` ${sm ? ' flex flex-col pt-40 py-20' : 'justify-start items-start' } pr-4 sm:ml-20 xs:items-start xs:ml-0`}>
         <div className='z-10 sm:pl-20 xs:ml-16'>
-          <img src={Picture3} className='xs:w-[100px] sm:w-[150px]' />
+          <img loading='lazy' src={Picture3} className='xs:w-[100px] sm:w-[150px]' />
         </div>
         <div className=''>
-          <img src={Picture6} className={` ${sm ? 'w-[300px]' : 'w-[450px]'}  `} />
+          <img loading='lazy' src={Picture6} className={` ${sm ? 'w-[300px]' : 'w-[450px]'}  `} />
         </div>
         <div className='sm:ml-20 md:mb-16 xs:ml-10'> 
-          <img src={con.third} className={`${activeLang === 'tr' ? 'w-[550px]' : 'w-[300px]'} ${activeLang === 'fr' ? 'w-[500px]' : 'w-[300px]'}`} />
+          <img loading='lazy' src={con.third} className={`${activeLang === 'tr' ? 'w-[550px]' : 'w-[300px]'} ${activeLang === 'fr' ? 'w-[500px]' : 'w-[300px]'}`} />
         </div>
       </div>
       <div className='xs:hidden sm:hidden mb-20 bg-white rounded-[40px] py-4 px-8 items-center sm:mr-20 md:flex flex-col shadow-xl mt-4'>
