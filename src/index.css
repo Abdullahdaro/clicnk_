@@ -171,3 +171,28 @@
     transform: rotateY(0deg);
   }
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px); /* You can adjust the animation properties as needed */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+/* Apply the animation to the elements */
+.animate-fade-in {
+  animation: fade-in 1s ease-out; /* You can adjust the animation duration and timing function */
+}
+
+.photo-container {
+  overflow: hidden;
+  transition: transform 1s ease; /* Adjust the duration and easing as needed */
+}
+
+.photo-container.transitioning {
+  transform: translateX(-10%); /* Slide the photo to the left when transitioning */
+}

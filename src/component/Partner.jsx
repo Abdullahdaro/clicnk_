@@ -173,16 +173,16 @@ const Partner = () => {
                 <h1 className='font-bold xs:text-xl xs:py-2 sm:py-0'>Istanbul, Turkey</h1>
                 <span className='xs:py-2 sm:py-0'>Hamidiye, Cendere Cd. No:103 <br className='xs:hidden sm:flex' /> D:1B, 34398 Kâğıthane/ <br className='xs:hidden sm:flex' /> İstanbul/Türkiye</span>
                 <div className=' text-white gap-2 flex pt-2 rounded-l-[50px] rounded-r-none text-2xl px-2 pr-5'>
-                  <a href='https://www.facebook.com/Qualidentclinic' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                  <a href={parter.faceLink} target='_blank' rel='noopener noreferrer' className="icon-hover">
                     <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faFacebook} />
                   </a>
-                  <a href='https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA==' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                  <a href={parter.instaLink} target='_blank' rel='noopener noreferrer' className="icon-hover">
                     <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faInstagram} />
                   </a>
                   <a href='https://www.linkedin.com/company/qualidentclinic/' target='_blank' rel='noopener noreferrer' className="icon-hover">
                     <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faLinkedin} />
                   </a>
-                  <a href='https://api.whatsapp.com/send?phone=905308309219' target='_blank' rel='noopener noreferrer' className="icon-hover">
+                  <a href={parter.whatsLink} target='_blank' rel='noopener noreferrer' className="icon-hover">
                     <FontAwesomeIcon className='bg-[#DDAC68] bg-opacity-50 py-1 rounded-lg px-2' icon={faWhatsapp} />
                   </a>
                   <a href='https://www.youtube.com/@qualidentagzvedissaglgpoli582' target='_blank' rel='noopener noreferrer' className="icon-hover">

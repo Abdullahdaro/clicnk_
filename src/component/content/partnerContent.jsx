@@ -23,6 +23,9 @@ const partnerContent = {
         fillemail: 'Please enter your email',
         formphone: 'Phone Number',
         submit : 'Submit Now',
+        faceLink: "https://www.facebook.com/Qualidentclinic",
+        instaLink: " https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA",
+        whatsLink: "https://api.whatsapp.com/send?phone=905308309219"
     },
 
     tr: {
@@ -48,6 +51,9 @@ const partnerContent = {
         fillemail: 'Lütfen email adresinizi giriniz',
         formphone: 'Telefon Numarası',
         submit : 'Şimdi Gönder',
+        faceLink: "https://www.facebook.com/Qualident.tr?mibextid=LQQJ4d",
+        instaLink: "https://instagram.com/qualident.clinic?igshid=MzRlODBiNWFlZA",
+        whatsLink: "https://api.whatsapp.com/send?phone=905398289219"
     },
 
     fr: {
@@ -75,6 +81,9 @@ const partnerContent = {
         fillemail: 'Veuillez entrer votre email',
         formphone: 'Numéro de téléphone',
         submit : 'Envoyer maintenant',
+        faceLink: "https://www.facebook.com/Qualidentclinic?mibextid=LQQJ4d",
+        instaLink: " https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA",
+        whatsLink: "https://api.whatsapp.com/send?phone=905308309219"
     },
 }
 

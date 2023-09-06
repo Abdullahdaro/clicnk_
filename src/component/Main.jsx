@@ -91,7 +91,14 @@ const main = () => {
   return (
 <div className={`flex flex-col w-full items-center relative `}>
   <img loading='lazy' className="absolute z-0 inset-0 w-full h-full object-cover opacity-40" src={background} alt="Background" />
-  <img loading='lazy' className={`absolute z-0 inset-0 w-full h-full object-cover ${sm ? 'opacity-90 blur-sm' : 'blure-50'}`} src={maingirl} alt="Main1" />
+    <img
+      loading="lazy"
+      className={`absolute h-full  w-[900px] z-0 object-cover ${
+        sm ? 'opacity-90 blur-sm' : 'blur-50'
+      }`}
+      src={main1}
+      alt="Main1"
+    />
   <div className={`z-10 flex md:pb-4 relative items-start justify-center ${sm ? 'pt-0' : 'pt-0' } xs:flex-col sm:flex-row`}>
     <div>
       <img loading='lazy' src={con.second} className={` ${sm ? 'w-[240px]' : 'w-[300px]'}  `}/>
@@ -146,7 +153,7 @@ const main = () => {
                         />
               <div className='border mt-2'></div>
             </div>
-            <div className='flex pl-4 xs:pl-11 items-center'>
+            <div className='flex justify-center items-center'>
               <button type="submit" className='items-center bg-main rounded-[40px] px-8 py-2 text-white font-bold'>{con.submit}</button>
             </div>
           </form>

@@ -13,11 +13,14 @@ import { CSSTransition } from 'react-transition-group';
 import 'animate.css/animate.min.css';
 import '../index.css';
 import { useLanguage } from '../constant/LanguageContext';
+import constantContent from './content/constantContent';
 
 const Constant = () => {
   const { activeLang, handleLangClick } = useLanguage();
 
   const [showGetQuote, setShowGetQuote] = useState(false);
+
+  const lan = constantContent[activeLang];
 
   const handleButtonClick = () => {
     setShowGetQuote((prev) => !prev);
@@ -59,16 +62,16 @@ const Constant = () => {
       <div className='sm:fixed xs:absolute z-20 md:top-10 md:right-0 xs:top-0 xs:right-4'>
         <div>
           <div className='bg-main text-white xs:flex-col md:flex-row flex xs:rounded-b-[50px] xs:rounded-t-none md:rounded-l-[50px] md:rounded-r-none xs:text-md md:text-2xl px-2 md:py-1 xs:py-2 md:pr-5'>
-            <a href='https://www.facebook.com/Qualidentclinic' target='_blank' rel='noopener noreferrer'>
+            <a href={lan.faceLink} target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faFacebook} />
             </a>
-            <a href='https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA==' target='_blank' rel='noopener noreferrer'>
+            <a href={lan.instaLink} target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faInstagram} />
             </a>
             <a href='https://www.linkedin.com/company/qualidentclinic/' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faLinkedin} />
             </a>
-            <a href='https://api.whatsapp.com/send?phone=905308309219' target='_blank' rel='noopener noreferrer'>
+            <a href={lan.whatsLink} target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faWhatsapp} />
             </a>
             <a href='https://www.youtube.com/@qualidentagzvedissaglgpoli582' target='_blank' rel='noopener noreferrer'>

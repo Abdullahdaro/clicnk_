@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 import Picture10 from '../assets/Picture10.png'
 import ad2 from '../assets/ad2.png'
 import styles from '../styles'
@@ -51,12 +51,38 @@ const id2 = advertisement[1]
 
 const Advertisement = () => {
   const { activeLang } = useLanguage()
+  const animatedRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px', // No margin around the viewport
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add your CSS class or trigger your animation here
+          entry.target.classList.add('animate-fade-in');
+          observer.unobserve(entry.target); // Unobserve once animation is triggered
+        }
+      });
+    }, options);
+
+    if (animatedRef.current) {
+      observer.observe(animatedRef.current);
+    }
+
+    // Cleanup the observer when the component unmounts
+    return () => observer.disconnect();
+  }, []);
 
   const firstAd = advertisementContent[activeLang] && advertisementContent[activeLang][0];
   const secondAd = advertisementContent[activeLang] && advertisementContent[activeLang][1];
   
   return (
-    <div className={`items-center flex justify-center `}>
+    <div ref={animatedRef} className={`items-center animate-on-scroll flex justify-center `}>
       <div class={`flex flex-wrap justify-center sm:max-w-[1280px] items-start md:w-full md:px-40 md:p-10 xs:p-2 gap-4 `}>
           <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-4 w-full">
               <div class="rounded-lg py-2 px-10 xs:px-0">
@@ -84,7 +110,7 @@ const Advertisement = () => {
                   </div>
                 </div>
               </div>
-              <div class="rounded-lg py-2 px-10 xs:px-0">
+              <div class="rounded-lg py-2 px-10 xs:px-0 ">
                 <div class="flex flex-col relative items-start bg-[#DDAC68] bg-opacity-10 rounded-[40px]">
                   <img src={secondAd.image} alt="Image Description" class="w-full" />
                   <div className='flex items-start px-6 flex-col'>
