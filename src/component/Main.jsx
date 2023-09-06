@@ -137,7 +137,6 @@ const main = () => {
                           value={formData.phone}
                           onChange={handlePhoneChange}
                           className="w-full border rounded-md px-4 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring focus:ring-main focus:border-main"
-                          placeholder="Enter your phone number"
                         />
                       </div>
                       <div className='border mt-2 mb-4 xs:mb-6'></div>
