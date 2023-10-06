@@ -62,7 +62,7 @@ const reviews = {
         way: '',
         review: '‘‘Special Thanks for warm welcome and the full support that was reserved for me.’’',
         image: oldman,
-        video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+        video: 'https://youtube.com/embed/EdPgH7Tb9jQ?si=ILfadM26nXrJB62F',
         flag: algeria,
         country: 'ALGERiA',
         hastag: '#Comfort'
@@ -73,9 +73,9 @@ const reviews = {
         way: '',
         review: '‘‘I received a quality smile, you have changed my life’’',
         image: blackwoman,
-        video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-        flag: iran,
-        country: 'IRAN',
+        video: 'https://youtube.com/embed/2GrfqEOMRVc?si=F9AhXm7AZWuXqz9I',
+        flag: usa,
+        country: 'USA',
         hastag: '#HappyTears'
       }
     ],
@@ -131,7 +131,7 @@ const reviews = {
             way: '',
             review: '‘‘Sıcak karşılama ve bana ayrılan tüm destek ve imkanlar için özel teşekkür ederim.’’',
             image: oldman,
-            video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+            video: 'https://youtube.com/embed/EdPgH7Tb9jQ?si=ILfadM26nXrJB62F',
             flag: algeria,
             country: 'CEZAYİR',
             hastag: '#Konfor'
@@ -142,9 +142,9 @@ const reviews = {
             way: '',
             review: '‘‘Kaliteli bir gülüşe sahip oldum, hayatımı değiştirdiniz.’’',
             image: blackwoman,
-            video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-            flag: iran,
-            country: 'İRAN',
+            video: 'https://youtube.com/embed/2GrfqEOMRVc?si=F9AhXm7AZWuXqz9I',
+            flag: usa,
+            country: 'ABD',
             hastag: '#SevinçGözyaşları'
         },
     ],
@@ -201,7 +201,7 @@ const reviews = {
             way: '',
             review: '‘‘Remerciements particuliers pour laccueil chaleureux et le soutien total qui mont été réservés.’’',
             image: oldman,
-            video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
+            video: 'https://youtube.com/embed/EdPgH7Tb9jQ?si=ILfadM26nXrJB62F',
             flag: algeria,
             country: 'ALGÉRIE',
             hastag: '#Confort'
@@ -212,9 +212,9 @@ const reviews = {
             way: '',
             review: '‘‘J’ai eu un beau sourire, vous avez changé ma vie’’',
             image: blackwoman,
-            video: 'https://www.youtube.com/watch?v=7XwKnk16Zbs',
-            flag: iran,
-            country: 'IRAN',
+            video: 'https://youtube.com/embed/2GrfqEOMRVc?si=F9AhXm7AZWuXqz9I',
+            flag: usa,
+            country: 'Aux Etats-Unis',
             hastag: '#Larmes de Bonheur'
         },
     ],

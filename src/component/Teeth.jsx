@@ -151,8 +151,8 @@ const teeth = () => {
         </div>
         <div className="grid gap-4 sm:ml-0 md:ml-24">
           {setActiveButton === 0 && 
-          <div className="relative flex">
-            <div className="w-full h-full px-2 flex justify-end items-center">
+          <div className="relative flex justify-center">
+            <div className="w-auto h-auto px-2 flex justify-end items-center">
               <button
                 className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
                 onClick={handlePrev}
@@ -160,14 +160,14 @@ const teeth = () => {
                 <FontAwesomeIcon icon={faChevronLeft} />
               </button>
             </div>
-            <div className={`h-auto md:max-w-[550px] xs:max-w-[275px] photo-container ${isTransitioning ? 'transitioning' : ''}`}>
+            <div className={`h-auto md:max-w-[550px] xs:max-w-[300px] photo-container ${isTransitioning ? 'transitioning' : ''}`}>
                 <img
                   src={photos[currentPhoto].src}
                   alt={photos[currentPhoto].alt}
                   className={`w-full h-auto rounded-[40px]`}
                 />
               </div>
-            <div className="w-full h-full px-2 flex justify-between items-center">
+            <div className="w-auto h-auto px-2 flex justify-between items-center">
               <button
                 className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
                 onClick={handleNext}

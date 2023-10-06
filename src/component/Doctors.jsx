@@ -92,6 +92,7 @@ const Doctors = () => {
           <div className="flex justify-center  w-[700px] relative">
             <button
               className={`hover:text-[80px] text-[60px] text-main font-bold px-4 py-2 rounded-r absolute ${xs ? 'relative' : ''} z-10 top-1/2 transform -translate-y-1/2 left-2`}
+              onClick={handlePrev}
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>

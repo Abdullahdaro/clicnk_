@@ -26,6 +26,7 @@ const Constant = () => {
 
   const handleButtonClick = () => {
     setShowGetQuote(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -137,7 +138,7 @@ const Constant = () => {
             <a href={lan.whatsLink} target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faWhatsapp} />
             </a>
-            <a href='https://www.youtube.com/@qualidentagzvedissaglgpoli582' target='_blank' rel='noopener noreferrer'>
+            <a href='https://youtube.com/@QualidentClinic?si=gBdsdsCB3NmRXQYJ' target='_blank' rel='noopener noreferrer'>
               <FontAwesomeIcon className='md:px-2 xs:py-2 md:py-0 hover:scale-125' icon={faYoutube} />
             </a>
             <a href='mailto:info@qualident.com.tr' target='_blank' rel='noopener noreferrer'>
@@ -163,7 +164,7 @@ const Constant = () => {
         </div>
       {/* WhatsApp Button */}
             <a
-        href='https://api.whatsapp.com/send?phone=905308309219'
+        href={lan.whatsLink} 
         target='_blank'
         className='bg-[#74F58C] w-1/2 inline-flex items-center justify-center text-white py-4 font-bold text-lg'
       >

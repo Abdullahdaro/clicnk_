@@ -71,7 +71,11 @@ const teethContent ={
             },
             {
                 src: 'https://www.youtube.com/embed/ETW4B1q1MyY'
+            },
+            {
+                src: "https://www.youtube.com/embed/EdPgH7Tb9jQ"
             }
+
         ]
     },
 
@@ -126,6 +130,8 @@ const teethContent ={
             {
                 src: 'https://www.youtube.com/embed/RN1tu90FKis'
             },
+            {
+            }
         ],
     },
 
@@ -180,6 +186,9 @@ const teethContent ={
             {
                 src: 'https://www.youtube.com/embed/ETW4B1q1MyY'
             },
+            {
+                src: "https://www.youtube.com/embed/EdPgH7Tb9jQ"
+            }
         ]
     }
 }

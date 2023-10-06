@@ -94,7 +94,7 @@ const main = () => {
     <img
       loading="lazy"
       className={`absolute h-full  w-[900px] z-0 object-cover ${
-        sm ? 'opacity-90 blur-sm' : 'blur-50'
+        sm ? 'ml-80 opacity-100 blur-ss' : 'blur-50'
       }`}
       src={main1}
       alt="Main1"

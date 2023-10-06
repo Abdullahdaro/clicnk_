@@ -3,7 +3,8 @@ const constantContent = {
         {
         faceLink: "https://www.facebook.com/Qualidentclinic",
         instaLink: " https://instagram.com/qualidentinternational?igshid=MzRlODBiNWFlZA",
-        whatsLink: "https://api.whatsapp.com/send?phone=905308309219"
+        whatsLink: "https://api.whatsapp.com/send?phone=905308309219",
+        youtubeLink: "https://youtube.com/@QualidentClinic?si=gBdsdsCB3NmRXQYJ"
     },
 
     tr: {
