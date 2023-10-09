@@ -11,6 +11,7 @@ const europeContent = {
         fourth: 'Turkey Best Medical',
         fifth: 'Team Award',
         wp: wp,
+        wpl: "https://api.whatsapp.com/send?phone=905308309219",
     },
 
     tr: {
@@ -21,6 +22,7 @@ const europeContent = {
         fourth: 'Türkiye’nin En İyi',
         fifth: 'Tıbbi Ekibi Ödülü',
         wp: wptr,
+        wpl:  "https://api.whatsapp.com/send?phone=905398289219",
     },
 
 
@@ -32,6 +34,7 @@ const europeContent = {
         fourth: 'Prix de la Meilleure équipe',
         fifth: 'Médicale de Turquie',
         wp: wpfr,
+        wpl: "https://api.whatsapp.com/send?phone=905308309219",
     },
 }
 

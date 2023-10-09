@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../constant/LanguageContext'
 import doctors from './content/doctorContent'
+import wp from '../assets/wp.png'
+import wptr from '../assets/wptr.png'
+import wpfr from '../assets/wpfr.png'
 
 const Doctors = () => {
   const { activeLang } = useLanguage();
@@ -114,9 +117,14 @@ const Doctors = () => {
       </div>
       <div className='bg-[#DDAC681F] w-full items-center flex justify-center p-10'>
       <a
-        href='https://api.whatsapp.com/send?phone=905308309219' className='xs:hidden md:flex hover:scale-125'>
-              <img src={doctor.wp} className='w-[225px]' />
-            </a>
+        href={doctor.wp} className='xs:hidden md:flex hover:scale-125'>
+              <img   src={
+                  activeLang === "en" ? wp :
+                  activeLang === "fr" ? wpfr :
+                  activeLang === "tr" ? wptr :
+                  ""
+                }className='w-[225px]' />
+                          </a>
       </div>
     </div>
     

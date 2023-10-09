@@ -27,6 +27,7 @@ const teethContent ={
         third: 'Expriences',
         fourth: 'Clinic',
         wp: wp,
+        wpl: "https://api.whatsapp.com/send?phone=905308309219",
 
         reviews: [
             {  
@@ -85,6 +86,7 @@ const teethContent ={
         third: 'Deneyim',
         fourth: 'Klinik',
         wp: wptr,
+        wpl: "https://api.whatsapp.com/send?phone=905398289219",
 
         reviews: [
             {
@@ -142,6 +144,7 @@ const teethContent ={
         third: 'Expériences',
         fourth: 'Clinique',
         wp: wpfr,
+        wpl: "https://api.whatsapp.com/send?phone=905308309219",
 
         reviews: [
             {  

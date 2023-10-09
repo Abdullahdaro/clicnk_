@@ -38,9 +38,9 @@ const Europe = () => {
                         </div>
                             <span className='font-bold xs:text-md md:text-2xl xs:pl-6 md:pl-10'>     {content.fourth} <br />   {content.fifth}</span>
                     </div>   
-                    <button className='mt-5 flex xs:ml-20 xs:hidden md:flex'>
+                    <a href={content.wpl} className='mt-5 flex xs:ml-20 xs:hidden md:flex'>
                         <img src={content.wp} className='w-60 h-20 hover:scale-125' />
-                    </button>
+                    </a>
                 </div>
                 <div className='sm:items-start xs:items-center pl-10 gap-2 max-w-[800px] flex flex-wrap'>
                     <img src={pic1} className='sm:w-[200px] sm:h-[250px] xs:w-[150px] xs:h-[150px] rounded-md' />

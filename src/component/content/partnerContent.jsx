@@ -52,7 +52,7 @@ const partnerContent = {
         formphone: 'Telefon Numarası',
         submit : 'Şimdi Gönder',
         faceLink: "https://www.facebook.com/Qualident.tr?mibextid=LQQJ4d",
-        instaLink: "https://instagram.com/qualident.clinic?igshid=MzRlODBiNWFlZA",
+        instaLink: "https://www.instagram.com/qualident.clinic/?igshid=MzRlODBiNWFlZA",
         whatsLink: "https://api.whatsapp.com/send?phone=905398289219"
     },
 

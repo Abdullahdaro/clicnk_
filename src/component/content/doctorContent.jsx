@@ -9,7 +9,6 @@ import wpfr from '../../assets/wpfr.png';
 
 const doctors = {
     en: [
-
         {
             title: 'Our Specialist Doctors',
             name: 'Dr. Ghazwan Ghazi',
@@ -24,8 +23,9 @@ const doctors = {
             first: "Specialty:",
             second: "Education:",
             third: "Languages:",
-            forth: "Experience:"
-    
+            forth: "Experience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
+
         },
         {
             title: 'Our Specialist Doctors',
@@ -39,7 +39,8 @@ const doctors = {
             first: "Specialty:",
             second: "Education:",
             third: "Languages:",
-            forth: "Experience:"
+            forth: "Experience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Our Specialist Doctors',
@@ -53,7 +54,8 @@ const doctors = {
           first: "Specialty:",
           second: "Education:",
           third: "Languages:",
-          forth: "Experience:"
+          forth: "Experience:",
+          wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Our Specialist Doctors',
@@ -67,7 +69,8 @@ const doctors = {
           first: "Specialty:",
           second: "Education:",
           third: "Languages:",
-          forth: "Experience:"
+          forth: "Experience:",
+          wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
           title: 'Our Specialist Doctors',
@@ -81,7 +84,8 @@ const doctors = {
           first: "Specialty:",
           second: "Education:",
           third: "Languages:",
-          forth: "Experience:"
+          forth: "Experience:",
+          wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
     ],
 
@@ -101,6 +105,7 @@ const doctors = {
             second: "Eğitim:",
             third: "Diller:",
             forth: "Deneyim:",
+            wp:  "https://api.whatsapp.com/send?phone=905398289219"
         },
         {
             title: 'Uzman Doktorlarımız',
@@ -115,6 +120,7 @@ const doctors = {
             second: "Eğitim:",
             third: "Diller:",
             forth: "Deneyim:",
+            wp:  "https://api.whatsapp.com/send?phone=905398289219",
         },
         {
             title: 'Uzman Doktorlarımız',
@@ -129,6 +135,7 @@ const doctors = {
             second: "Eğitim:",
             third: "Diller:",
             forth: "Deneyim:",
+            wp:  "https://api.whatsapp.com/send?phone=905398289219",
         },
         {
             title: 'Uzman Doktorlarımız',
@@ -144,6 +151,7 @@ const doctors = {
             second: "Eğitim:",
             third: "Diller:",
             forth: "Deneyim:",
+            wp:  "https://api.whatsapp.com/send?phone=905398289219",
         },
         {
             title: 'Uzman Doktorlarımız',
@@ -158,6 +166,7 @@ const doctors = {
             second: "Eğitim:",
             third: "Diller:",
             forth: "Deneyim:",
+            wp:  "https://api.whatsapp.com/send?phone=905398289219",
         },
     ],
 
@@ -177,6 +186,7 @@ const doctors = {
             second: "Formation:",
             third: "Langues:",
             forth: "Expérience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Nos médecins spécialistes',
@@ -191,6 +201,7 @@ const doctors = {
             second: "Formation:",
             third: "Langues:",
             forth: "Expérience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Nos médecins spécialistes',
@@ -205,6 +216,7 @@ const doctors = {
             second: "Formation:",
             third: "Langues:",
             forth: "Expérience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Nos médecins spécialistes',
@@ -219,6 +231,7 @@ const doctors = {
             second: "Formation:",
             third: "Langues:",
             forth: "Expérience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
         {
             title: 'Nos médecins spécialistes',
@@ -233,6 +246,7 @@ const doctors = {
             second: "Formation:",
             third: "Langues:",
             forth: "Expérience:",
+            wp: "https://api.whatsapp.com/send?phone=905308309219",
         },
     ],
 }

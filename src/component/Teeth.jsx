@@ -5,13 +5,11 @@ import girlwithsmileblackhair from '../assets/girlwithsmileblackhair.png'
 import oldmansmile from '../assets/oldmansmile.png'
 import smilegirlteeth from '../assets/smilegirlteeth.png'
 import smileteeth from '../assets/smileteeth.png'
-import r1 from '../assets/r1.jpg'
-import r2 from '../assets/r2.jpg'
-import r3 from '../assets/r3.jpg'
-import r4 from '../assets/r4.jpg'
-import r5 from '../assets/r5.jpg'
-import r6 from '../assets/r6.jpg'
-import r7 from '../assets/r7.jpg'
+import pic1 from '../assets/pic1.png'
+import pic2 from '../assets/pic2.png'
+import pic3 from '../assets/pic3.png'
+import pic4 from '../assets/pic4.png'
+import pic5 from '../assets/pic5.png'
 import styles from '../styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
@@ -44,6 +42,29 @@ const photos = [
     }
 ]
 
+const clinicPhotos = [
+  {
+    src: pic1,
+    alt: 'pic1'
+  },
+  {
+    src: pic2,
+    alt: 'pic2'
+  },
+  {
+    src: pic3,
+    alt: 'pic3'
+  },
+  {
+    src: pic4,
+    alt: 'pic4'
+  },
+  {
+    src: pic5,
+    alt: 'pic5'
+  },
+]
+
 const teeth = () => {
     const { activeLang } = useLanguage();
     const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -62,6 +83,7 @@ const teeth = () => {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
+
     const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
@@ -97,6 +119,41 @@ const teeth = () => {
         setIsTransitioning(false);
       }, 1000); // Adjust the duration based on your transition duration
     };
+
+    useEffect(() => {
+      const timer = setInterval(() => {
+        setIsTransitioning(true);
+        setCurrentPhoto((prevPhoto) => (prevPhoto + 1) % clinicPhotos.length);
+  
+        // Reset the transitioning state after the transition duration
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 1000); // Adjust the duration based on your transition duration
+      }, 3000);
+  
+      return () => clearInterval(timer);
+    }, []);
+  
+    const handlePrevClinic = () => {
+      setIsTransitioning(true);
+      setCurrentPhoto((prevPhoto) => (prevPhoto - 1 + clinicPhotos.length) % clinicPhotos.length);
+  
+      // Reset the transitioning state after the transition duration
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000); // Adjust the duration based on your transition duration
+    };
+  
+    const handleNextClinic = () => {
+      setIsTransitioning(true);
+      setCurrentPhoto((prevPhoto) => (prevPhoto + 1) % clinicPhotos.length);
+  
+      // Reset the transitioning state after the transition duration
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000); // Adjust the duration based on your transition duration
+    };
+    
     
     useEffect(() => {
       const timer = setInterval(() => {
@@ -145,7 +202,7 @@ const teeth = () => {
             <button key={2} onClick={() => handleButtonClick(2)} className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4 active:bg-main hover:bg-main  shadow-lg'>{teethContent[activeLang].third}</button>
             <button key={3} onClick={() => handleButtonClick(3)} className='border-main border my-3 text-[#3C3C3B] font-bold md:text-xl xs:text-[10px] rounded-[40px] md:px-4 md:py-2 xs:py-1 xs:px-4 active:bg-main hover:bg-main  shadow-lg'>{teethContent[activeLang].fourth}</button>
             <a
-             href='https://api.whatsapp.com/send?phone=905308309219'className='xs:hidden md:flex'>
+             href={teethContent[activeLang].wpl} className='xs:hidden md:flex'>
               <img loading="lazy" src={teethContent[activeLang].wp} alt='button' className='w-[225px]  hover:scale-125 transform transition duration-500 ease-in-out'/>
             </a>
         </div>
@@ -225,11 +282,47 @@ const teeth = () => {
             </div>
           </div>
           }
-          {setActiveButton === 3 &&
-          <div className="relative flex justify-center">
-            <iframe className='xs:w-[275px] sm:w-[375px] md:w-[560px] xs:h-[315px] md:h-[400px]' src="https://www.youtube.com/embed/KLw0Rik3xps?si=3RnFuOVNWWw6d9im" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          }
+          {setActiveButton === 3 && (
+            activeLang === "tr" ? (
+              // Render nothing for Turkish
+              <div className="relative flex justify-center">
+              <div className="w-auto h-auto px-2 flex justify-end items-center">
+                <button
+                  className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+                  onClick={handlePrevClinic}
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
+              </div>
+              <div className={`h-[242px] md:max-w-[486px] xs:max-w-[275px] photo-container ${isTransitioning ? 'transitioning' : ''}`}>
+                <img
+                  src={clinicPhotos[currentPhoto].src}
+                  alt={clinicPhotos[currentPhoto].alt}
+                  className={`w-full h-full rounded-[40px]`}
+                />
+              </div>
+              <div className="w-auto h-auto px-2 flex justify-between items-center">
+                <button
+                  className="hover:scale-125 xs:text-[30px] md:text-[60px] text-main font-bold px-4 py-2 rounded-r z-10 transform"
+                  onClick={handleNextClinic}
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </button>
+              </div>
+            </div>
+            ) : (
+              <div className="relative flex justify-center">
+                <iframe
+                  className='xs:w-[275px] sm:w-[375px] md:w-[560px] xs:h-[315px] md:h-[400px]'
+                  src="https://www.youtube.com/embed/KLw0Rik3xps?si=3RnFuOVNWWw6d9im"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            )
+          )}
         </div>
     </div>
   )
