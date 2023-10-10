@@ -5,6 +5,12 @@ import girlwithsmileblackhair from '../assets/girlwithsmileblackhair.png'
 import oldmansmile from '../assets/oldmansmile.png'
 import smilegirlteeth from '../assets/smilegirlteeth.png'
 import smileteeth from '../assets/smileteeth.png'
+import b1 from '../assets/b1.jpg'
+import b2 from '../assets/b2.jpg'
+import b3 from '../assets/b3.jpg'
+import b4 from '../assets/b4.jpg'
+import b5 from '../assets/b5.jpg'
+import b6 from '../assets/b6.jpg'
 import pic1 from '../assets/pic1.png'
 import pic2 from '../assets/pic2.png'
 import pic3 from '../assets/pic3.png'
@@ -18,27 +24,28 @@ import { useLanguage } from '../constant/LanguageContext';
 
 const photos = [
     {
-        src: blackteeth,
+        src: b1,
         alt: 'blackteeth'
     },
     {
-        src: blackwomanteeth,
+        src: b2,
         alt: 'girlteeth'
     },
     {
-        src: girlwithsmileblackhair,
+        src: b3,
         alt: 'girlwithsmileblackhair'
     },
     {
-        src: oldmansmile,
+        src: b4,
         alt: 'oldmansmile'
     },
     {   
-        src: smilegirlteeth,
+        src: b5,
         alt: 'smilegirltheeth'
     },
     {
-        src: smileteeth,
+        src: b6,
+        alt: 'smileteeth'
     }
 ]
 
