@@ -29,7 +29,7 @@ const reviews = {
           way: 'E-Max Laminate Veneers',
           review: '‘‘After I had Laminate Veneers done, it contributed my modeling a lot, which is my profession‘‘',
           image: irangirl,
-          video: 'https://www.youtube.com/embed/ItD6nMZRbCU',
+          video: "https://www.youtube.com/embed/6S_pvA7uYDs?si=O1Yy_Oshyvj4x_Wd" ,
           flag: iran,
           country: 'IRAN',
           hastag: '#Celebrity'
@@ -51,7 +51,7 @@ const reviews = {
         way: '',
         review: '‘‘‘I was unhappy with my appearance, I had forgotten to laugh. Now I realize that I can laugh, lucky me.’’’',
         image: turkey,
-        video: 'https://www.youtube.com/embed/4yiGZyX21h4',
+        video: 'https://www.youtube.com/embed/wfoHP7_KB-g?si=_X7Pg1hlfb6p7TZh',
         flag: turkeyflag,
         country: 'TURKEY',
         hastag: '#Self-Confidence'
@@ -109,7 +109,7 @@ const reviews = {
             way: 'E-Max Zirkonyum Kuron',
             review: '‘‘Tüm işlemlerden sonra iyi olduğumdan emin olmak için tüm süreç boyunca benimle iletişim halinde oldular.’’',
             image: girlwithsmile,
-            video: 'https://www.youtube.com/embed/kk3xdM4EMZg',
+            video: 'https://www.youtube.com/embed/3_wfxgNsuJ8?si=uzlu-tpoB5V0ys17',
             flag: usa,
             country: 'ABD',
             hastag: '#Memnuniyet'
@@ -120,7 +120,7 @@ const reviews = {
             way: '',
             review: '‘‘Tedaviye başlamadan önce gülmeyi unutmuştum, şimdi anlıyorum ki artık gülebiliyormuşum, ne mutlu bana’’',
             image: turkey,
-            video: 'https://www.youtube.com/embed/4yiGZyX21h4',
+            video: 'https://www.youtube.com/embed/4yiGZyX21h4?si=Cn3rQAnxT_2Crm34',
             flag: turkeyflag,
             country: 'TÜRKİYE',
             hastag: '#Özgüven'
@@ -168,7 +168,7 @@ const reviews = {
             review: 
             '‘‘Après avoir fait poser des facettes en stratifié, jai beaucoup appris à modeler, ce qui est ma profession.‘‘',
             image: irangirl,
-            video: 'https://www.youtube.com/embed/ItD6nMZRbCU',
+            video: "https://www.youtube.com/embed/6S_pvA7uYDs?si=O1Yy_Oshyvj4x_Wd" ,
             flag: iran,
             country: 'IRAN',
             hastag: '#Célébrité'
@@ -190,7 +190,7 @@ const reviews = {
             way: '',
             review: '‘‘Jétais mécontent de mon apparence, javais oublié de rire. Maintenant je me rends compte que je peux rire, jai de la chance.’’',
             image: turkey,
-            video: 'https://www.youtube.com/embed/4yiGZyX21h4',
+            video: 'https://www.youtube.com/embed/wfoHP7_KB-g?si=_X7Pg1hlfb6p7TZh',
             flag: turkeyflag,
             country: 'La Turqie',
             hastag: '#Confiance en Soi'

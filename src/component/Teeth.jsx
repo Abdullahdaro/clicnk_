@@ -301,7 +301,7 @@ const teeth = () => {
                   <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
               </div>
-              <div className={`h-[242px] md:max-w-[486px] xs:max-w-[275px] photo-container ${isTransitioning ? 'transitioning' : ''}`}>
+              <div className={`xs:h-[235px] md:h-[460px] md:w-[525px] xs:min-w-[275px] photo-container ${isTransitioning ? 'transitioning' : ''}`}>
                 <img
                   src={clinicPhotos[currentPhoto].src}
                   alt={clinicPhotos[currentPhoto].alt}
