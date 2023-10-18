@@ -12,7 +12,7 @@ import tursab from '../assets/tursab.png'
 import patient from '../assets/patient.png'
 import partner from '../assets/partner.png'
 import partner2 from '../assets/partner2.png'
-import picture3 from '../assets/picture3.png'
+import Picture3 from '../assets/picture3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
@@ -169,7 +169,7 @@ const Partner = () => {
                 </div>
               </div>
               <div className='flex xs:text-md xs:pb-4 sm:pb-0 sm:text-xl xs:items-center sm:items-start xs:pt-8 sm:pt-0 flex-col xs:px-40 sm:px-6'>
-                <img src={picture3} className='sm:w-[125px] pb-4 xs:w-[150px] h-18' />
+                <img src={Picture3} className='sm:w-[125px] pb-4 xs:w-[150px] h-18' />
                 <h1 className='font-bold xs:text-xl xs:py-2 sm:py-0'>Istanbul, Turkey</h1>
                 <span className='xs:py-2 sm:py-0'>Hamidiye, Cendere Cd. No:103 <br className='xs:hidden sm:flex' /> D:1B, 34398 Kâğıthane/ <br className='xs:hidden sm:flex' /> İstanbul/Türkiye</span>
                 <div className=' text-white gap-2 flex pt-2 rounded-l-[50px] rounded-r-none text-2xl px-2 pr-5'>
