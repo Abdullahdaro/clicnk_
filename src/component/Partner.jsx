@@ -12,7 +12,7 @@ import tursab from '../assets/tursab.png'
 import patient from '../assets/patient.png'
 import partner from '../assets/partner.png'
 import partner2 from '../assets/partner2.png'
-import Picture3 from '../assets/picture3.png'
+import Picture3 from '../assets/Picture3.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebook,
